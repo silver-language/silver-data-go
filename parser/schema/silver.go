@@ -1,19 +1,35 @@
 package schema
 
-var silverLexer = []Lexer {
-	Lexer {
-		nodeType: 'line'
-		regex: '^(.*)\n'
+var silverLexer = []Lexer{
+	Lexer{
+		nodeType: "line",
+		regex:    `^(\s*)(.*)\n`,
+		subexp: []Subexp{
+			{
+				number:   1,
+				nodeType: "indent",
+			},
+			{
+				number:   2,
+				nodeType: "statement",
+			},
+		},
 	},
-	Lexer {
-		nodeType: 'statement'
-		regex
-	}
-
+	Lexer{
+		nodeType: "statement",
+		regex:    `([^:]*):(.*)`,
+		subexp: []Subexp{
+			{
+				number:   1,
+				nodeType: "name",
+			},
+			{
+				number:   2,
+				nodeType: "statement",
+			},
+		},
+	},
 }
-
-
-
 
 type File struct {
 	nodeType string

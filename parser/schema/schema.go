@@ -11,6 +11,17 @@ type AstNode struct {
 type Lexer struct {
 	nodeType string
 	regex    string
+	test     []string
+	subexp   []Subexp
+}
+
+/* each lexer can either split the text immediately,
+or depending on a test then pass onto another lexer
+*/
+
+type Subexp struct {
+	number   int
+	nodeType string
 }
 
 /*
