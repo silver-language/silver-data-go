@@ -15,6 +15,7 @@ var silverLexer = []Lexer{
 			},
 		},
 	},
+	/*
 	Lexer{
 		nodeType: "statement",
 		regex:    `([^:]*):(.*)`,
@@ -29,6 +30,7 @@ var silverLexer = []Lexer{
 			},
 		},
 	},
+	/*
 }
 
 type File struct {
