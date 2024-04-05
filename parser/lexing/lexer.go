@@ -1,11 +1,20 @@
 package lexing
 
-import "experiment/parser/schema"
+import (
+	"experiment/parser/schema"
+	"fmt"
+	"regexp"
+)
 
-func Lex(source string, nodeType string) schema.AstNode {
-	//
+func Lex(source string, nodeType string, lexer schema.Lexer) schema.AstNode {
+
+	fmt.Println(lexer[nodeType])
 
 	result := new(schema.AstNode)
+
+	// this lexer
+
+	//fmt.Println(abstractSyntaxTree)
 
 	/*
 		run the node through its tests
@@ -27,4 +36,10 @@ func Lex(source string, nodeType string) schema.AstNode {
 	*/
 
 	return *result
+}
+
+func splitter(text string, regex string) []string {
+	re := regexp.MustCompile(regex)
+	result := re.Split(text, -1)
+	return result
 }

@@ -15,18 +15,27 @@ type AstNode struct {
 	Child      []AstNode // zero or more child nodes
 }
 
-type Lexer struct {
+type Lexer map[string]NodeLexer
+
+type NodeLexer struct {
 	nodeType string
 	regex    string
 	test     []string
 	subexp   []Subexp
 }
 
+type SimpleSplitter struct {
+	nodeType string
+	regexp   string
+	output   string
+}
+
 /*
 each lexer can either split the text immediately,
-
 or depending on a test then pass onto another lexer
 
+as I don't know yet how to do an 'or' type in go (enum, sum, union, choice, etc)
+I'll just create separate node fields for branches and leaves
 
 */
 

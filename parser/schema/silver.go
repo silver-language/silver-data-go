@@ -1,8 +1,13 @@
 package schema
 
-var silverLexer = []Lexer{
-	Lexer{
-		nodeType: "line",
+var SilverLexer = Lexer{
+	"document": SimpleSplitter{
+		nodeType: "split",
+		regex:    `\R`,
+		output: 'line',
+	},
+	"line": NodeLexer{
+		nodeType: "subex",
 		regex:    `^(\s*)(.*)\n`,
 		subexp: []Subexp{
 			{
@@ -15,7 +20,7 @@ var silverLexer = []Lexer{
 			},
 		},
 	},
-	Lexer{
+	"statement": NodeLexer{
 		nodeType: "statement",
 		regex:    `([^:]*):(.*)`,
 		subexp: []Subexp{

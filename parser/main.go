@@ -2,6 +2,7 @@ package main
 
 import (
 	lexing "experiment/parser/lexing"
+	schema "experiment/parser/schema"
 	"fmt"
 	"os"
 )
@@ -32,7 +33,7 @@ func main() {
 
 	contentString := string(content)
 
-	abstractSyntaxTree := lexing.Lex(contentString, "document")
+	abstractSyntaxTree := lexing.Lex(contentString, "document", schema.SilverLexer)
 
 	fmt.Println(abstractSyntaxTree)
 
