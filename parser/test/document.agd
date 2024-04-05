@@ -1,0 +1,26 @@
+
+
+myDoc: Document
+	Title 'This is the heading of the document'
+
+	Paragraph
+		lorum ipsum
+		dolor sit amet
+
+	Link http://localhost/help
+
+	UnorderedList
+		item 1
+		item 2
+		item 3
+
+	OrderedList
+		do this
+		then this
+		finally this
+
+	Code
+		10 print "Hello world"
+		20 goto 10
+myDoc end
+
