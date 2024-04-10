@@ -30,12 +30,17 @@ type SimpleSplitter struct {
 	output   string
 }
 
+type SubmatchSplitter struct {
+}
+
 /*
 each lexer can either split the text immediately,
 or depending on a test then pass onto another lexer
 
 as I don't know yet how to do an 'or' type in go (enum, sum, union, choice, etc)
-I'll just create separate node fields for branches and leaves
+I'll just create separate node fields for branches and leaves that can zero or more elements.
+
+I also need to figure out the best way to compose structs in Go.
 
 */
 
