@@ -6,9 +6,24 @@ import (
 	"regexp"
 )
 
+type NodeArray []schema.AstNode
+
 func Lex(ast schema.AstNode, source string, nodeType string, lexer schema.Lexer) schema.AstNode {
 
-	fmt.Println(lexer[nodeType])
+	// fmt.Println(lexer[nodeType])
+
+	// first run any tests
+	// leaving this out for the moment - will come back to
+
+	// second, try to split this node
+
+	nodeLexer, ok := lexer[nodeType]
+	if !ok {
+		panic(fmt.Sprintf("Node type not found: %v", nodeType))
+		// or return an error node type??
+	}
+
+	submatches := lexer[nodeType]
 
 	result := new(schema.AstNode)
 
