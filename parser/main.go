@@ -8,34 +8,41 @@ import (
 )
 
 func main() {
+	inputFilename := "./test/factorial.agl"
+	outputFilename := fmt.Sprintf("%s.ast", inputFilename)
 
-	// read file
-
+	// Open and read file
 	filename := "./test/factorial.agl"
-
-	// show file stats
 	file, err := os.Open(filename)
-
 	if err != nil {
 		fmt.Println(err)
 	}
-	//fmt.Println(file.Stat())
+	defer file.Close()
 
-	// read the file
 	content, err := os.ReadFile(filename)
 
-	// fmt.Println(reflect.TypeOf(content))	// content is a slice
-
 	if err != nil {
-		fmt.Println("Err")
+		fmt.Println("Error reading file")
 	}
-	//fmt.Println(string(content))
 
+	// Parse file content
 	contentString := string(content)
 
-	abstractSyntaxTree := lexing.Lex(contentString, "document", schema.SilverLexer)
+	abstractSyntaxTree := schema.AstNode{
+		NodeType:  "document",
+		Text:      contentString,
+		LineStart: 1,
+		LineEnd:   1,
+		CharStart: 1,
+		CharEnd:   1,
+	}
 
-	fmt.Println(abstractSyntaxTree)
+	lexing.Lex(abstractSyntaxTree, contentString, "document", schema.SilverLexer)
 
-	defer file.Close()
+	// Write output
+	output := fmt.Sprintf("%+v", abstractSyntaxTree)
+	err = os.WriteFile(outputFilename, []byte(output), 0644)
+	if err != nil {
+		fmt.Println(err)
+	}
 }

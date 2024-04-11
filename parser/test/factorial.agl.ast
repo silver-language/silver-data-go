@@ -1,0 +1,9 @@
+{NodeType:document Text:
+factorial : Function
+	parameter : Integer number		// domain
+	type : Integer					// codomain
+	result : match (number = 0)		// image/range
+		true	: 1
+		false	: factorial(number: parameter.number-1)
+factorial end
+ LineStart:1 LineEnd:1 CharStart:1 CharEnd:1 Child:[]}

@@ -6,13 +6,15 @@ import (
 	"regexp"
 )
 
-func Lex(source string, nodeType string, lexer schema.Lexer) schema.AstNode {
+func Lex(ast schema.AstNode, source string, nodeType string, lexer schema.Lexer) schema.AstNode {
 
 	fmt.Println(lexer[nodeType])
 
 	result := new(schema.AstNode)
 
-	// this lexer
+	/* given some text and a node type, attempt to split it into nodes
+	there will need to be two levels to this
+	*/
 
 	//fmt.Println(abstractSyntaxTree)
 
@@ -43,3 +45,16 @@ func splitter(text string, regex string) []string {
 	result := re.Split(text, -1)
 	return result
 }
+
+/* I'm getting confused so here's an outline.
+
+
+start with some text and a node type
+send the text node type to the lexer which outputs some nodes
+	for each node returned
+
+
+
+
+
+*/

@@ -1,39 +1,46 @@
 package schema
 
 var SilverLexer = Lexer{
-	"document": SimpleSplitter{
+	"document": NodeLexer{
 		nodeType: "split",
 		regex:    `\R`,
-		output: 'line',
+		subexp: []Submatch{
+			{
+				index:    0,
+				nodeType: "line",
+			},
+		},
 	},
 	"line": NodeLexer{
 		nodeType: "subex",
 		regex:    `^(\s*)(.*)\n`,
-		subexp: []Subexp{
+		subexp: []Submatch{
 			{
-				number:   1,
+				index:    0,
 				nodeType: "indent",
 			},
 			{
-				number:   2,
+				index:    1,
 				nodeType: "statement",
 			},
 		},
 	},
-	"statement": NodeLexer{
-		nodeType: "statement",
-		regex:    `([^:]*):(.*)`,
-		subexp: []Subexp{
-			{
-				number:   1,
-				nodeType: "name",
-			},
-			{
-				number:   2,
-				nodeType: "statement",
+	/*
+		"statement": NodeLexer{
+			nodeType: "statement",
+			regex:    `([^:]*):(.*)`,
+			subexp: []Subexp{
+				{
+					number:   1,
+					nodeType: "name",
+				},
+				{
+					number:   2,
+					nodeType: "statement",
+				},
 			},
 		},
-	},
+	*/
 }
 
 type File struct {
