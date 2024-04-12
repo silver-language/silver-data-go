@@ -2,29 +2,31 @@ package schema
 
 var SilverLexer = Lexer{
 	"document": NodeLexer{
-		nodeType: "split",
-		regex:    `\R`,
-		subexp: []Submatch{
+		NodeType: "linesplit",
+		Regex:    `\R`,
+		Subexp: []Submatch{
 			{
-				index:    0,
+				index:    -1,
 				nodeType: "line",
 			},
 		},
 	},
-	"line": NodeLexer{
-		nodeType: "subex",
-		regex:    `^(\s*)(.*)\n`,
-		subexp: []Submatch{
-			{
-				index:    0,
-				nodeType: "indent",
-			},
-			{
-				index:    1,
-				nodeType: "statement",
+	/*
+		"line": NodeLexer{
+			nodeType: "subex",
+			regex:    `^(\s*)(.*)\n`,
+			subexp: []Submatch{
+				{
+					index:    0,
+					nodeType: "indent",
+				},
+				{
+					index:    1,
+					nodeType: "statement",
+				},
 			},
 		},
-	},
+	*/
 	/*
 		"statement": NodeLexer{
 			nodeType: "statement",

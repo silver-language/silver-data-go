@@ -7,14 +7,14 @@ https://pkg.go.dev/math/big
 type Lexer map[string]NodeLexer
 
 type NodeLexer struct {
-	nodeType string
-	regex    string
-	test     []string
-	subexp   []Submatch
+	NodeType string
+	Regex    string
+	Test     []string
+	Subexp   []Submatch
 }
 
 type Submatch struct {
-	index    uint
+	index    int
 	nodeType string
 	match    string
 }
@@ -49,9 +49,9 @@ can i eject more nodes from the lexer by using grouping patterns, or do i have t
 type AstNode struct {
 	NodeType  string    // type of node
 	Text      string    // raw text of the node
-	LineStart uint      // start line of this node
-	LineEnd   uint      // end line of this node
-	CharStart uint      // start character of this node
-	CharEnd   uint      // end character of this node
+	LineStart int       // start line of this node
+	LineEnd   int       // end line of this node
+	CharStart int       // start character of this node
+	CharEnd   int       // end character of this node
 	Child     []AstNode // zero or more child nodes
 }

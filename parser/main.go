@@ -37,7 +37,7 @@ func main() {
 		CharEnd:   1,
 	}
 
-	lexing.Lex(abstractSyntaxTree, contentString, "document", schema.SilverLexer)
+	lexing.Lex(&abstractSyntaxTree, schema.SilverLexer)
 
 	// Write output
 	output := fmt.Sprintf("%+v", abstractSyntaxTree)
