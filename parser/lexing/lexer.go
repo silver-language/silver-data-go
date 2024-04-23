@@ -38,7 +38,7 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 		}
 	default:
 		{
-			astNode.NodeType = fmt.Sprintf("Node type not found: %v", astNode.NodeType)
+			astNode.NodeType = fmt.Sprintf("%v: node type not found", astNode.NodeType)
 		}
 	}
 	/*

@@ -1,0 +1,9 @@
+{
+	"NodeType": "document: node type not found",
+	"Text": "\nfactorial : Function\n\tparameter : Integer number\t\t// domain\n\ttype : Integer\t\t\t\t\t// codomain\n\tresult : match (number = 0)\t\t// image/range\n\t\ttrue\t: 1\n\t\tfalse\t: factorial(number: parameter.number-1)\nfactorial end\n",
+	"LineStart": 1,
+	"LineEnd": 1,
+	"CharStart": 1,
+	"CharEnd": 1,
+	"Child": null
+}
