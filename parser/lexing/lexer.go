@@ -8,7 +8,7 @@ import (
 
 type NodeArray []schema.AstNode
 
-func Lex(astNode *schema.AstNode, lexer schema.Lexer) { //schema.AstNode
+func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //schema.AstNode
 
 	// first run any tests
 	// leaving this out for the moment - will come back to
@@ -27,23 +27,27 @@ func Lex(astNode *schema.AstNode, lexer schema.Lexer) { //schema.AstNode
 		}
 	*/
 
-	nodeLexer, ok := lexer[astNode.NodeType]
-	if ok {
-		switch nodeLexer.NodeType {
-		case "linesplit":
-			{
-				astNode.Child = linesplitNode(*astNode, nodeLexer)
-			}
-		case "substring":
-			{
-				astNode.Child = submatchNode(*astNode, nodeLexer)
-			}
+	switch nodeType {
+	case "linesplit":
+		{
+			astNode.Child = linesplitNode(astNode, lexer)
 		}
-	} else {
-		// panic(fmt.Sprintf("Node type not found: %v", nodeType))
-		// or return an error node type??
-		astNode.NodeType = fmt.Sprintf("Node type not found: %v", astNode.NodeType)
+	case "substring":
+		{
+			astNode.Child = submatchNode(astNode, lexer)
+		}
+	default:
+		{
+			astNode.NodeType = fmt.Sprintf("Node type not found: %v", astNode.NodeType)
+		}
 	}
+	/*
+		} else {
+			// panic(fmt.Sprintf("Node type not found: %v", nodeType))
+			// or return an error node type??
+			astNode.NodeType = fmt.Sprintf("Node type not found: %v", astNode.NodeType)
+		}
+	*/
 
 	/* given some text and a node type, attempt to split it into nodes
 	there will need to be two levels to this
@@ -62,14 +66,14 @@ func Lex(astNode *schema.AstNode, lexer schema.Lexer) { //schema.AstNode
 	//return result
 }
 
-func linesplitNode(astNode schema.AstNode, lexer schema.NodeLexer) []schema.AstNode {
+func linesplitNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.AstNode {
 	re := regexp.MustCompile(lexer.Regex)
 	split := re.Split(astNode.Text, -1)
 
 	result := []schema.AstNode{}
 
 	for i := 1; i <= len(split); i++ {
-		result := append(result,
+		result = append(result,
 			schema.AstNode{
 				NodeType:  "line",
 				Text:      split[i-1],
@@ -85,7 +89,7 @@ func linesplitNode(astNode schema.AstNode, lexer schema.NodeLexer) []schema.AstN
 	return result
 }
 
-func submatchNode(astNode schema.AstNode, lexer schema.NodeLexer) []schema.AstNode {
+func submatchNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.AstNode {
 	result := new([]schema.AstNode)
 	return *result
 }
