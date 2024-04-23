@@ -1,4 +1,4 @@
-{NodeType:document Text:
+{NodeType:Node type not found: document Text:
 factorial : Function
 	parameter : Integer number		// domain
 	type : Integer					// codomain
