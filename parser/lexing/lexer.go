@@ -8,6 +8,22 @@ import (
 
 type NodeArray []schema.AstNode
 
+func LexDocument(document string) schema.AstNode {
+
+	abstractSyntaxTree := schema.AstNode{
+		NodeType:  "document",
+		Text:      document,
+		LineStart: 1,
+		LineEnd:   1,
+		CharStart: 1,
+		CharEnd:   1,
+	}
+
+	documentLexer := schema.SilverLexer["document"]
+	Lex(&abstractSyntaxTree, &documentLexer, "document")
+	return abstractSyntaxTree
+}
+
 func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //schema.AstNode
 
 	// first run any tests

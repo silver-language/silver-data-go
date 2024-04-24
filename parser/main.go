@@ -1,44 +1,43 @@
 package main
 
-import (
-	"encoding/json"
-	"fmt"
-	"log"
-	lexing "silver-data/parser-go/lexing"
-	schema "silver-data/parser-go/schema"
-	test "silver-data/parser-go/test"
-)
+import "silver-data/parser-go/test"
 
 func main() {
 
-	testFolder := "./test/file/"
-	testFilename := "factorial.agl"
+	//testFolder := "./test/file/"
+	//testFilename := "factorial.agl"
 	//outputFilename := fmt.Sprintf("%s.ast", inputFilename)
-	testFilepath := fmt.Sprintf("%v%v", testFolder, testFilename)
-	outputFilepath := fmt.Sprintf("%s.ast.json", testFilepath)
+	//testFilepath := fmt.Sprintf("%v%v", testFolder, testFilename)
+	//outputFilepath := fmt.Sprintf("%s.ast.json", testFilepath)
 
-	// Parse file content
-	content := test.ReadFile(testFilepath)
+	/*
+		// Parse file content
+		content := test.ReadFile(testFilepath)
 
-	abstractSyntaxTree := schema.AstNode{
-		NodeType:  "document",
-		Text:      content,
-		LineStart: 1,
-		LineEnd:   1,
-		CharStart: 1,
-		CharEnd:   1,
-	}
+		abstractSyntaxTree := schema.AstNode{
+			NodeType:  "document",
+			Text:      content,
+			LineStart: 1,
+			LineEnd:   1,
+			CharStart: 1,
+			CharEnd:   1,
+		}
 
-	tmp := schema.SilverLexer["document"]
+		tmp := schema.SilverLexer["document"]
 
-	lexing.Lex(&abstractSyntaxTree, &tmp, "document")
+		lexing.Lex(&abstractSyntaxTree, &tmp, "document")
 
-	// Write output
+		// Write output
 
-	json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
+		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
 
-	test.WriteFile(outputFilepath, string(json))
+		test.WriteFile(outputFilepath, string(json))
+	*/
+
+	files := test.GetFiles()
+	test.GenerateOutput(files)
+
 }

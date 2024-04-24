@@ -1,8 +1,11 @@
 package test
 
 import (
+	"encoding/json"
 	"fmt"
+	"log"
 	"os"
+	"silver-data/parser-go/lexing"
 )
 
 /*
@@ -35,21 +38,44 @@ regenerate output:
 
 */
 
-//testFolder := "./test/file/"
-//testFilename := "factorial.agl"
-//outputFilename := fmt.Sprintf("%s.ast", inputFilename)
-//testFilePath := fmt.Sprintf("%v%v", testFolder, testFilename)
-//outputFilePath := fmt.Sprintf("%s.ast.json", testFilePath)
-
 /*
-func generateOutput() {
-	//
-}
+
 
 func test() {
 	//
 }
 */
+
+func GetFiles() []string {
+
+	testFolder := "./test/file/"
+	testFilename := "factorial.agl"
+
+	testFilePath := fmt.Sprintf("%v%v", testFolder, testFilename)
+
+	// studentsAge := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	return []string{testFilePath}
+}
+
+func GenerateOutput(fileArray []string) {
+	/* given fileArray
+	 */
+	for index, thisFile := range fileArray {
+		fmt.Printf("%v: %v \n", index, thisFile)
+
+		input := ReadFile(thisFile)
+
+		abstractSyntaxTree := lexing.LexDocument(input)
+		outputFilepath := fmt.Sprintf("%s.ast.json", thisFile)
+
+		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+		WriteFile(outputFilepath, string(json))
+	}
+
+}
 
 func ReadFile(filepath string) string {
 	// Open file
