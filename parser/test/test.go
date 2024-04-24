@@ -39,27 +39,22 @@ regenerate output:
 */
 
 /*
-
-
 func test() {
 	//
 }
 */
 
+var testFolder = "./test/file/"
+var testFilename = "factorial.agl"
+
 func GetFiles() []string {
-
-	testFolder := "./test/file/"
-	testFilename := "factorial.agl"
-
 	testFilePath := fmt.Sprintf("%v%v", testFolder, testFilename)
-
-	// studentsAge := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	return []string{testFilePath}
 }
 
+// generate output for an array of files
 func GenerateOutput(fileArray []string) {
-	/* given fileArray
-	 */
+
 	for index, thisFile := range fileArray {
 		fmt.Printf("%v: %v \n", index, thisFile)
 
@@ -74,7 +69,6 @@ func GenerateOutput(fileArray []string) {
 		}
 		WriteFile(outputFilepath, string(json))
 	}
-
 }
 
 func ReadFile(filepath string) string {
