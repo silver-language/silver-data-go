@@ -2,11 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	lexing "experiment/parser/lexing"
-	schema "experiment/parser/schema"
 	"fmt"
 	"log"
 	"os"
+	lexing "silver-data/parser-go/lexing"
+	schema "silver-data/parser-go/schema"
 )
 
 func main() {

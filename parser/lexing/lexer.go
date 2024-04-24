@@ -1,9 +1,9 @@
 package lexing
 
 import (
-	"experiment/parser/schema"
 	"fmt"
 	"regexp"
+	"silver-data/parser-go/schema"
 )
 
 type NodeArray []schema.AstNode
