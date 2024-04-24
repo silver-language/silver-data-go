@@ -10,22 +10,24 @@ import (
 )
 
 func main() {
-	inputFilename := "./test/factorial.agl"
-	//outputFilename := fmt.Sprintf("%s.ast", inputFilename)
-	outputFilename := fmt.Sprintf("%s.ast.json", inputFilename)
 
-	// Open and read file
-	filename := "./test/factorial.agl"
-	file, err := os.Open(filename)
+	testFolder := "./test/file/"
+	testFilename := "factorial.agl"
+	//outputFilename := fmt.Sprintf("%s.ast", inputFilename)
+	testFilePath := fmt.Sprintf("%v%v", testFolder, testFilename)
+	outputFilePath := fmt.Sprintf("%s.ast.json", testFilePath)
+
+	// Open file
+	file, err := os.Open(testFilePath)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error opening file: %v", err)
 	}
 	defer file.Close()
 
-	content, err := os.ReadFile(filename)
-
+	// Read file
+	content, err := os.ReadFile(testFilePath)
 	if err != nil {
-		fmt.Println("Error reading file")
+		fmt.Println("Error reading file: %v", err)
 	}
 
 	// Parse file content
@@ -52,7 +54,7 @@ func main() {
 	}
 
 	//output := fmt.Sprintf("%+v", abstractSyntaxTree)
-	err = os.WriteFile(outputFilename, []byte(output), 0644)
+	err = os.WriteFile(outputFilePath, []byte(output), 0644)
 	if err != nil {
 		fmt.Println(err)
 	}
