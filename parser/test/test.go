@@ -44,11 +44,14 @@ func test() {
 }
 */
 
-var testFolder = "./test/file/"
+var baseFolder = "./test/"
+var testSuite = "simple"
+var inputFolder = fmt.Sprintf("%s%s/", baseFolder, testSuite)
+var outputFolder = fmt.Sprintf("%s%s-output/", baseFolder, testSuite)
 var testFilename = "factorial.agl"
 
 func GetFiles() []string {
-	testFilePath := fmt.Sprintf("%v%v", testFolder, testFilename)
+	testFilePath := fmt.Sprintf("%s%s", inputFolder, testFilename)
 	return []string{testFilePath}
 }
 
@@ -61,7 +64,7 @@ func GenerateOutput(fileArray []string) {
 		input := ReadFile(thisFile)
 
 		abstractSyntaxTree := lexing.LexDocument(input)
-		outputFilepath := fmt.Sprintf("%s.ast.json", thisFile)
+		outputFilepath := fmt.Sprintf("%s%s.ast.json", outputFolder, thisFile)
 
 		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
 		if err != nil {
