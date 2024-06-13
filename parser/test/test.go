@@ -50,8 +50,9 @@ var inputFolder = fmt.Sprintf("%s%s/", baseFolder, testSuite)
 var outputFolder = fmt.Sprintf("%s%s-output/", baseFolder, testSuite)
 var testFilename = "factorial.agl"
 
-func GetFiles() []string {
-	testFilePath := fmt.Sprintf("%s%s", inputFolder, testFilename)
+func GetFiles(folder string) []string {
+
+	testFilePath := fmt.Sprintf("%s%s", folder, testFilename)
 	return []string{testFilePath}
 }
 
@@ -59,12 +60,13 @@ func GetFiles() []string {
 func GenerateOutput(fileArray []string) {
 
 	for index, thisFile := range fileArray {
-		fmt.Printf("%v: %v \n", index, thisFile)
+		fmt.Printf("Test %v: %v \n", index, thisFile)
 
 		input := ReadFile(thisFile)
 
 		abstractSyntaxTree := lexing.LexDocument(input)
-		outputFilepath := fmt.Sprintf("%s%s.ast.json", outputFolder, thisFile)
+		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, thisFile) //!!
+		//fmt.Printf("outputFilepath: %v \n", outputFilepath)
 
 		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
 		if err != nil {
@@ -95,6 +97,7 @@ func ReadFile(filepath string) string {
 }
 
 func WriteFile(filepath string, content string) {
+	//fmt.Printf("filepath: %v \n", filepath)
 	err := os.WriteFile(filepath, []byte(content), 0644)
 	if err != nil {
 		fmt.Printf("Error writing file: %v \n", err)

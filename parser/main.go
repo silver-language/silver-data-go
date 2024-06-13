@@ -37,7 +37,7 @@ func main() {
 		test.WriteFile(outputFilepath, string(json))
 	*/
 
-	files := test.GetFiles()
+	files := test.GetFiles("./test/simple/")
 	test.GenerateOutput(files)
 
 }
