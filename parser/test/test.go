@@ -17,7 +17,7 @@ defaults for:
 	ouptut formats
 
 operations:
-	test
+	test run
 	regenerate output
 
 test:
@@ -126,8 +126,7 @@ processFile(file string)
 
 */
 
-func ProcessTestDirectory(directoryPath string) {
-	//read directory
+func TestDirectory(directoryPath string) {
 	directoryItems, err := os.ReadDir(directoryPath)
 	var itemPath string
 
@@ -143,11 +142,38 @@ func ProcessTestDirectory(directoryPath string) {
 
 		if directoryItem.IsDir() {
 			itemPath = fmt.Sprintf("%s%s/", directoryPath, directoryItem.Name())
-			ProcessTestDirectory(itemPath)
+			TestDirectory(itemPath)
 		} else {
-			itemPath = fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
-			if isInputFile(itemPath) {
-				ProcessTestFile(itemPath)
+			//itemPath = fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
+			if isInputFile(directoryItem.Name()) {
+				TestFile(directoryPath, directoryItem.Name())
+			}
+		}
+	}
+	//return testResults
+}
+
+func GenerateDirectoryOutput(directoryPath string) {
+	directoryItems, err := os.ReadDir(directoryPath)
+	var itemPath string
+
+	if err != nil {
+		log.Fatal(err)
+		fmt.Printf("Error reading directory: %v \n %v \n", directoryPath, err)
+	}
+
+	for index, directoryItem := range directoryItems {
+		fmt.Printf("directory item: %v \n %v \n", index, directoryItem)
+
+		//fmt.Printf("directory: %v \n", itemPath)
+
+		if directoryItem.IsDir() {
+			itemPath = fmt.Sprintf("%s%s/", directoryPath, directoryItem.Name())
+			GenerateDirectoryOutput(itemPath)
+		} else {
+			//itemPath = fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
+			if isInputFile(directoryItem.Name()) {
+				GenerateOutputFile(directoryPath, directoryItem.Name())
 			}
 		}
 	}
@@ -162,6 +188,46 @@ func isInputFile(filePath string) bool {
 	return result
 }
 
-func ProcessTestFile(filePath string) {
-	fmt.Printf("ProcessTestFile: %v \n", filePath)
+func TestFile(directory string, fileName string) {
+	fmt.Printf("Test file: %v \n", fileName)
+
+	/*
+		//fmt.Printf("Test %v: %v \n", index, thisFile)
+		filePath := fmt.Sprintf("%s%s", directory, fileName)
+
+		input := ReadFile(filePath)
+
+		abstractSyntaxTree := lexing.LexDocument(input)
+		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, filePath) //!!
+		//fmt.Printf("outputFilepath: %v \n", outputFilepath)
+
+		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+		WriteFile(outputFilepath, string(json))
+	*/
+
+}
+
+func GenerateOutputFile(directory string, fileName string) {
+	fmt.Printf("Generate output: %v \n", fileName)
+
+	/*
+		//fmt.Printf("Test %v: %v \n", index, thisFile)
+		filePath := fmt.Sprintf("%s%s", directory, fileName)
+
+		input := ReadFile(filePath)
+
+		abstractSyntaxTree := lexing.LexDocument(input)
+		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, filePath) //!!
+		//fmt.Printf("outputFilepath: %v \n", outputFilepath)
+
+		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+		if err != nil {
+			log.Fatalf(err.Error())
+		}
+		WriteFile(outputFilepath, string(json))
+	*/
+
 }

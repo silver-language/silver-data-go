@@ -1,8 +1,14 @@
 package main
 
-import "silver-data/parser-go/test"
+import (
+	"fmt"
+	"os"
+	"silver-data/parser-go/test"
+)
 
 func main() {
+
+	fmt.Println("silver-data-parser-go")
 
 	//testFolder := "./test/file/"
 	//testFilename := "factorial.agl"
@@ -40,6 +46,17 @@ func main() {
 	// files := test.GetFiles("./test/simple/")
 	//test.GenerateOutput(files)
 
-	test.ProcessTestDirectory("./test/")
-
+	if len(os.Args) > 1 {
+		task := os.Args[1]
+		switch task {
+		case "test":
+			test.TestDirectory("./test/")
+		case "generate":
+			test.GenerateDirectoryOutput("./test/")
+		default:
+			fmt.Println("No matching task")
+		}
+	} else {
+		fmt.Println("Try: test")
+	}
 }
