@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"silver-data/parser-go/lexing"
+	"strings"
 )
 
 /*
@@ -49,6 +50,8 @@ var testSuite = "simple"
 var inputFolder = fmt.Sprintf("%s%s/", baseFolder, testSuite)
 var outputFolder = fmt.Sprintf("%s%s-output/", baseFolder, testSuite)
 var testFilename = "factorial.agl"
+
+var inputFileSuffixes = [2]string{".agd", ".agl"}
 
 func GetFiles(folder string) []string {
 
@@ -103,4 +106,62 @@ func WriteFile(filepath string, content string) {
 		fmt.Printf("Error writing file: %v \n", err)
 	}
 	fmt.Printf("File written: %v \n", filepath)
+}
+
+/* Rewrite
+
+readDir(directory string)
+	read directory
+	loop directoryItems
+		match directory
+			readDir(item)
+		match file
+			processFile(item)
+
+processFile(file string)
+	match inputtype
+		generateOutput(file)
+	match other
+		ignore
+
+*/
+
+func ProcessTestDirectory(directoryPath string) {
+	//read directory
+	directoryItems, err := os.ReadDir(directoryPath)
+	var itemPath string
+
+	if err != nil {
+		log.Fatal(err)
+		fmt.Printf("Error reading directory: %v \n %v \n", directoryPath, err)
+	}
+
+	for index, directoryItem := range directoryItems {
+		fmt.Printf("directory item: %v \n %v \n", index, directoryItem)
+
+		//fmt.Printf("directory: %v \n", itemPath)
+
+		if directoryItem.IsDir() {
+			itemPath = fmt.Sprintf("%s%s/", directoryPath, directoryItem.Name())
+			ProcessTestDirectory(itemPath)
+		} else {
+			itemPath = fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
+			if isInputFile(itemPath) {
+				ProcessTestFile(itemPath)
+			}
+		}
+	}
+	//return testResults
+}
+
+func isInputFile(filePath string) bool {
+	result := false
+	for _, suffix := range inputFileSuffixes {
+		result = result || strings.HasSuffix(filePath, suffix)
+	}
+	return result
+}
+
+func ProcessTestFile(filePath string) {
+	fmt.Printf("ProcessTestFile: %v \n", filePath)
 }
