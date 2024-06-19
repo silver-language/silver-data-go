@@ -136,7 +136,7 @@ func TestDirectory(directoryPath string) {
 	}
 
 	for index, directoryItem := range directoryItems {
-		fmt.Printf("directory item: %v \n %v \n", index, directoryItem)
+		fmt.Printf("%v: %v \n", index, directoryItem)
 
 		//fmt.Printf("directory: %v \n", itemPath)
 
@@ -151,8 +151,9 @@ func TestDirectory(directoryPath string) {
 		}
 	}
 	//return testResults
-}
+} //TestDirectory
 
+// GenerateDirectoryOutput
 func GenerateDirectoryOutput(directoryPath string) {
 	directoryItems, err := os.ReadDir(directoryPath)
 	var itemPath string
@@ -163,7 +164,7 @@ func GenerateDirectoryOutput(directoryPath string) {
 	}
 
 	for index, directoryItem := range directoryItems {
-		fmt.Printf("directory item: %v \n %v \n", index, directoryItem)
+		fmt.Printf("%v: %v \n", index, directoryItem)
 
 		//fmt.Printf("directory: %v \n", itemPath)
 
@@ -178,7 +179,7 @@ func GenerateDirectoryOutput(directoryPath string) {
 		}
 	}
 	//return testResults
-}
+} //GenerateDirectoryOutput
 
 func isInputFile(filePath string) bool {
 	result := false
@@ -213,21 +214,20 @@ func TestFile(directory string, fileName string) {
 func GenerateOutputFile(directory string, fileName string) {
 	fmt.Printf("Generate output: %v \n", fileName)
 
-	/*
-		//fmt.Printf("Test %v: %v \n", index, thisFile)
-		filePath := fmt.Sprintf("%s%s", directory, fileName)
+	//fmt.Printf("Test %v: %v \n", index, thisFile)
+	filePath := fmt.Sprintf("%s%s", directory, fileName)
 
-		input := ReadFile(filePath)
+	input := ReadFile(filePath)
 
-		abstractSyntaxTree := lexing.LexDocument(input)
-		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, filePath) //!!
-		//fmt.Printf("outputFilepath: %v \n", outputFilepath)
+	abstractSyntaxTree := lexing.LexDocument(input)
+	outputFilepath := fmt.Sprintf("%s.ast.json", filePath) //!!
+	fmt.Printf("outputFilepath: %v \n", outputFilepath)
 
-		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-		WriteFile(outputFilepath, string(json))
-	*/
+	json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+
+	WriteFile(outputFilepath, string(json))
 
 }
