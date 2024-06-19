@@ -35,49 +35,9 @@ regenerate output:
 		stringify
 		write result
 	return output rewrites
-
-
 */
-
-/*
-func test() {
-	//
-}
-*/
-
-var baseFolder = "./test/"
-var testSuite = "simple"
-var inputFolder = fmt.Sprintf("%s%s/", baseFolder, testSuite)
-var outputFolder = fmt.Sprintf("%s%s-output/", baseFolder, testSuite)
-var testFilename = "factorial.agl"
 
 var inputFileSuffixes = [2]string{".agd", ".agl"}
-
-func GetFiles(folder string) []string {
-
-	testFilePath := fmt.Sprintf("%s%s", folder, testFilename)
-	return []string{testFilePath}
-}
-
-// generate output for an array of files
-func GenerateOutput(fileArray []string) {
-
-	for index, thisFile := range fileArray {
-		fmt.Printf("Test %v: %v \n", index, thisFile)
-
-		input := ReadFile(thisFile)
-
-		abstractSyntaxTree := lexing.LexDocument(input)
-		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, thisFile) //!!
-		//fmt.Printf("outputFilepath: %v \n", outputFilepath)
-
-		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-		WriteFile(outputFilepath, string(json))
-	}
-}
 
 func ReadFile(filepath string) string {
 	// Open file
