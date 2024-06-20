@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"silver-data/parser-go/file"
 	"silver-data/parser-go/lexing"
 	"strings"
 )
@@ -38,35 +39,6 @@ regenerate output:
 */
 
 var inputFileSuffixes = [2]string{".agd", ".agl"}
-
-func ReadFile(filepath string) string {
-	// Open file
-	file, err := os.Open(filepath)
-	if err != nil {
-		fmt.Printf("Error opening file: %v \n", err)
-	}
-	defer file.Close()
-
-	fmt.Printf("File opened: %v \n", filepath)
-
-	// Read file
-	content, err := os.ReadFile(filepath)
-	if err != nil {
-		fmt.Printf("Error reading file: %v \n", err)
-	}
-	fmt.Printf("File read: %v \n", filepath)
-
-	return string(content)
-}
-
-func WriteFile(filepath string, content string) {
-	//fmt.Printf("filepath: %v \n", filepath)
-	err := os.WriteFile(filepath, []byte(content), 0644)
-	if err != nil {
-		fmt.Printf("Error writing file: %v \n", err)
-	}
-	fmt.Printf("File written: %v \n", filepath)
-}
 
 /* Rewrite
 
@@ -177,7 +149,7 @@ func GenerateOutputFile(directory string, fileName string) {
 	//fmt.Printf("Test %v: %v \n", index, thisFile)
 	filePath := fmt.Sprintf("%s%s", directory, fileName)
 
-	input := ReadFile(filePath)
+	input := file.Read(filePath)
 
 	abstractSyntaxTree := lexing.LexDocument(input)
 	outputFilepath := fmt.Sprintf("%s.ast.json", filePath) //!!
@@ -188,6 +160,6 @@ func GenerateOutputFile(directory string, fileName string) {
 		log.Fatalf(err.Error())
 	}
 
-	WriteFile(outputFilepath, string(json))
+	file.Write(outputFilepath, string(json))
 
 }
