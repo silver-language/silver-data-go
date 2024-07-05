@@ -1,0 +1,9 @@
+{
+	"NodeType": "document: node type not found",
+	"Text": "\n\nmyDoc: Document\n\tTitle 'This is the heading of the document'\n\n\tParagraph\n\t\tlorum ipsum\n\t\tdolor sit amet\n\n\tLink http://localhost/help\n\n\tUnorderedList\n\t\titem 1\n\t\titem 2\n\t\titem 3\n\n\tOrderedList\n\t\tdo this\n\t\tthen this\n\t\tfinally this\n\n\tCode\n\t\t10 print \"Hello world\"\n\t\t20 goto 10\nmyDoc end\n\n",
+	"LineStart": 1,
+	"LineEnd": 1,
+	"CharStart": 1,
+	"CharEnd": 1,
+	"Child": null
+}

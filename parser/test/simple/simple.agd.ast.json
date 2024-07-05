@@ -1,0 +1,9 @@
+{
+	"NodeType": "document: node type not found",
+	"Text": "a:\t1\nb:\n\t2\nc:\n\t1\n\t2\nd:\n\td1: 1\n\td2: 2\n",
+	"LineStart": 1,
+	"LineEnd": 1,
+	"CharStart": 1,
+	"CharEnd": 1,
+	"Child": null
+}

@@ -1,0 +1,9 @@
+{
+	"NodeType": "document: node type not found",
+	"Text": "\nname:\n\tname1:\n\t\tvalue1\n\t\tvalue2\n\t\tvalue3\n\n\tname2:\n\t\tvalue1\n\t\tvalue2\n\t\tvalue3\n\tend\n\n\tname3:\n\t\tvalue1\n\t\tvalue2\n\t\tvalue3\n\tname3 end\nname end\n",
+	"LineStart": 1,
+	"LineEnd": 1,
+	"CharStart": 1,
+	"CharEnd": 1,
+	"Child": null
+}
