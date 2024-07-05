@@ -69,7 +69,7 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 	there will need to be two levels to this
 	*/
 
-	//fmt.Println(abstractSyntaxTree)
+	//log.Println(abstractSyntaxTree)
 
 	/*
 		run the node through its tests

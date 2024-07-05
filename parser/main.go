@@ -8,16 +8,16 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"log"
 	"silver-data/parser-go/test"
 )
 
 func main() {
-	fmt.Println("Module: silver-data-parser-go")
+	log.Println("Module: silver-data-parser-go")
 
 	options := getOptions()
 
-	fmt.Println("Task:", options.task)
+	log.Println("Task:", options.task)
 	switch options.task {
 	case "test":
 		test.TestDirectory(options.directory)
@@ -25,8 +25,8 @@ func main() {
 		test.GenerateDirectoryOutput(options.directory)
 	default:
 		{
-			fmt.Println("No matching task")
-			fmt.Println("Tasks: test, generate")
+			log.Println("No matching task")
+			log.Println("Tasks: test, generate")
 		}
 	}
 }
