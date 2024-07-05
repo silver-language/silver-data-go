@@ -15,21 +15,35 @@ import (
 func main() {
 	fmt.Println("Module: silver-data-parser-go")
 
-	taskPtr := flag.String("task", "none", "The task for the parser to perform")
-	directoryPtr := flag.String("directory", "./test/", "Directory for tests")
-	flag.Parse()
+	options := getOptions()
 
-	task := *taskPtr // os.Args[1]
-	fmt.Println("Task:", task)
-	switch task {
+	fmt.Println("Task:", options.task)
+	switch options.task {
 	case "test":
-		test.TestDirectory(*directoryPtr)
+		test.TestDirectory(options.directory)
 	case "generate":
-		test.GenerateDirectoryOutput(*directoryPtr)
+		test.GenerateDirectoryOutput(options.directory)
 	default:
 		{
 			fmt.Println("No matching task")
 			fmt.Println("Tasks: test, generate")
 		}
 	}
+}
+
+type options struct {
+	task      string
+	directory string
+}
+
+func getOptions() options {
+	var result options
+	taskPtr := flag.String("task", "none", "The task for the parser to perform")
+	directoryPtr := flag.String("directory", "./test/", "Directory for tests")
+	flag.Parse()
+
+	result.task = *taskPtr
+	result.directory = *directoryPtr
+
+	return result
 }
