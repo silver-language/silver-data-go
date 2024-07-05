@@ -32,3 +32,14 @@ What should the tests return?
 		inputfile	output file			match yes/no
 
 Could keep a copy of these results in each directory also - not sure if needed?
+
+
+More bits to add
+----------------
+* Specify input file filters (*.foo etc) - currently hardcoded
+* Specify output/test formats
+* Reporting of test results
+
+Guess I should probably also look at https://pkg.go.dev/testing
+
+
