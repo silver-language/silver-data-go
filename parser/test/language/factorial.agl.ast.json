@@ -1,9 +1,91 @@
 {
-	"NodeType": "document: node type not found",
+	"NodeType": "document",
 	"Text": "\nfactorial : Function\n\tparameter : Integer number\t\t// domain\n\ttype : Integer\t\t\t\t\t// codomain\n\tresult : match (number = 0)\t\t// image/range\n\t\ttrue\t: 1\n\t\tfalse\t: factorial(number: parameter.number-1)\nfactorial end\n",
-	"LineStart": 1,
-	"LineEnd": 1,
-	"CharStart": 1,
-	"CharEnd": 1,
-	"Child": null
+	"LineStart": 0,
+	"LineEnd": 9,
+	"CharStart": 0,
+	"CharEnd": 0,
+	"Child": [
+		{
+			"NodeType": "line",
+			"Text": "",
+			"LineStart": 1,
+			"LineEnd": 1,
+			"CharStart": 0,
+			"CharEnd": 0,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "factorial : Function",
+			"LineStart": 2,
+			"LineEnd": 2,
+			"CharStart": 0,
+			"CharEnd": 20,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "\tparameter : Integer number\t\t// domain",
+			"LineStart": 3,
+			"LineEnd": 3,
+			"CharStart": 0,
+			"CharEnd": 38,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "\ttype : Integer\t\t\t\t\t// codomain",
+			"LineStart": 4,
+			"LineEnd": 4,
+			"CharStart": 0,
+			"CharEnd": 31,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "\tresult : match (number = 0)\t\t// image/range",
+			"LineStart": 5,
+			"LineEnd": 5,
+			"CharStart": 0,
+			"CharEnd": 44,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "\t\ttrue\t: 1",
+			"LineStart": 6,
+			"LineEnd": 6,
+			"CharStart": 0,
+			"CharEnd": 10,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "\t\tfalse\t: factorial(number: parameter.number-1)",
+			"LineStart": 7,
+			"LineEnd": 7,
+			"CharStart": 0,
+			"CharEnd": 47,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "factorial end",
+			"LineStart": 8,
+			"LineEnd": 8,
+			"CharStart": 0,
+			"CharEnd": 13,
+			"Child": null
+		},
+		{
+			"NodeType": "line",
+			"Text": "",
+			"LineStart": 9,
+			"LineEnd": 9,
+			"CharStart": 0,
+			"CharEnd": 0,
+			"Child": null
+		}
+	]
 }

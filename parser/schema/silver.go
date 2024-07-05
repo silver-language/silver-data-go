@@ -2,8 +2,8 @@ package schema
 
 var SilverLexer = Lexer{
 	"document": NodeLexer{
-		NodeType: "linesplit",
-		Regex:    `\R`,
+		Splitter: "lineSplitter",
+		Regex:    `\n`,
 		Subexp: []Submatch{
 			{
 				index:    -1,

@@ -7,7 +7,7 @@ https://pkg.go.dev/math/big
 type Lexer map[string]NodeLexer
 
 type NodeLexer struct {
-	NodeType string
+	Splitter string
 	Regex    string
 	Test     []string
 	Subexp   []Submatch

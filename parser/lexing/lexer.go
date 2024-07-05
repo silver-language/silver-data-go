@@ -13,10 +13,10 @@ func LexDocument(document string) schema.AstNode {
 	abstractSyntaxTree := schema.AstNode{
 		NodeType:  "document",
 		Text:      document,
-		LineStart: 1,
-		LineEnd:   1,
-		CharStart: 1,
-		CharEnd:   1,
+		LineStart: 0,
+		LineEnd:   0,
+		CharStart: 0,
+		CharEnd:   0,
 	}
 
 	documentLexer := schema.SilverLexer["document"]
@@ -43,10 +43,13 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 		}
 	*/
 
-	switch nodeType {
-	case "linesplit":
+	switch lexer.Splitter {
+	case "lineSplitter":
 		{
 			astNode.Child = linesplitNode(astNode, lexer)
+			lastChild := astNode.Child[len(astNode.Child)-1]
+			astNode.LineEnd = lastChild.LineEnd
+			astNode.CharEnd = lastChild.CharEnd
 		}
 	case "substring":
 		{
@@ -95,7 +98,7 @@ func linesplitNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.As
 				Text:      split[i-1],
 				LineStart: i,
 				LineEnd:   i,
-				CharStart: 1,
+				CharStart: 0,
 				CharEnd:   len(split[i-1]),
 				//Child:     []schema.AstNode,
 			},
