@@ -13,6 +13,7 @@ import (
 )
 
 func main() {
+	log.SetFlags(log.Lshortfile)
 	log.Println("Module: silver-data-parser-go")
 
 	options := getOptions()
