@@ -2,12 +2,15 @@ package lexing
 
 import (
 	"fmt"
+	"log"
 	"regexp"
 	"silver-data/parser-go/schema"
 )
 
-type NodeArray []schema.AstNode
+// type NodeArray []schema.AstNode
 
+/* LexDocument
+ */
 func LexDocument(document string) schema.AstNode {
 
 	abstractSyntaxTree := schema.AstNode{
@@ -24,6 +27,8 @@ func LexDocument(document string) schema.AstNode {
 	return abstractSyntaxTree
 }
 
+/* Lex
+ */
 func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //schema.AstNode
 
 	// first run any tests
@@ -51,7 +56,7 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 			astNode.LineEnd = lastChild.LineEnd
 			astNode.CharEnd = lastChild.CharEnd
 		}
-	case "substring":
+	case "subExpression":
 		{
 			astNode.Child = submatchNode(astNode, lexer)
 		}
@@ -110,6 +115,13 @@ func linesplitNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.As
 
 func submatchNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.AstNode {
 	result := new([]schema.AstNode)
+
+	re := regexp.MustCompile(lexer.Regex)
+
+	submatch := re.FindStringSubmatch(astNode.Text)
+	log.Println(submatch)
+	// there needs to be some distinction here
+
 	return *result
 }
 

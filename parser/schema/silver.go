@@ -11,22 +11,20 @@ var SilverLexer = Lexer{
 			},
 		},
 	},
-	/*
-		"line": NodeLexer{
-			nodeType: "subex",
-			regex:    `^(\s*)(.*)\n`,
-			subexp: []Submatch{
-				{
-					index:    0,
-					nodeType: "indent",
-				},
-				{
-					index:    1,
-					nodeType: "statement",
-				},
+	"line": NodeLexer{
+		Splitter: "subExpression",
+		Regex:    `^(\s*)(.*)$`,
+		Subexp: []Submatch{
+			{
+				index:    0,
+				nodeType: "whitespace",
+			},
+			{
+				index:    1,
+				nodeType: "statement",
 			},
 		},
-	*/
+	},
 	/*
 		"statement": NodeLexer{
 			nodeType: "statement",

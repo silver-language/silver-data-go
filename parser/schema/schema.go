@@ -1,8 +1,21 @@
+/*
+Schema
+*/
 package schema
 
 /* need regexes and AST nodes
 https://pkg.go.dev/math/big
 */
+
+type AstNode struct {
+	NodeType  string    // type of node
+	Text      string    // raw text of the node
+	LineStart int       // start line of this node
+	LineEnd   int       // end line of this node
+	CharStart int       // start character of this node
+	CharEnd   int       // end character of this node
+	Child     []AstNode // zero or more child nodes
+}
 
 type Lexer map[string]NodeLexer
 
@@ -45,13 +58,3 @@ I also need to figure out the best way to compose structs in Go.
 /*
 can i eject more nodes from the lexer by using grouping patterns, or do i have to use a cursor?
 */
-
-type AstNode struct {
-	NodeType  string    // type of node
-	Text      string    // raw text of the node
-	LineStart int       // start line of this node
-	LineEnd   int       // end line of this node
-	CharStart int       // start character of this node
-	CharEnd   int       // end character of this node
-	Child     []AstNode // zero or more child nodes
-}
