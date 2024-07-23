@@ -22,7 +22,18 @@ Might need a way to indicate that a node terminates, ie that it has no children 
 The switch in the node lexer will fall through if it doesn't find a splitter, but might be nice to make it more explicit.
 
 Setting a node type
+-------------------
 
 One possible option:
 https://stackoverflow.com/questions/9993178/is-there-a-nice-way-to-simulate-a-maybe-or-option-type-in-go
+
+This technique might be good for some cases, but it's probably not needed here yet.
+See for example:
+https://stackoverflow.com/questions/59964619/difference-using-pointer-in-struct-fields
+
+There are a few caveats noted, so will just use another flag to indicate a terminal node for now.
+Can change later if wanted.
+
+
+
 
