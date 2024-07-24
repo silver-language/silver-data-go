@@ -13,11 +13,11 @@ var SilverLexer = Lexer{
 	},
 	"line": NodeLexer{
 		Splitter: "subExpression",
-		Regex:    `^(\s*)(.*)$`,
+		Regex:    `^(\t*)(.*)$`,
 		Subexp: []Submatch{
 			{
 				index:    0,
-				nodeType: "whitespace",
+				nodeType: "indent",
 			},
 			{
 				index:    1,
@@ -25,6 +25,7 @@ var SilverLexer = Lexer{
 			},
 		},
 	},
+	"indent": NodeLexer{},
 	/*
 		"statement": NodeLexer{
 			nodeType: "statement",

@@ -15,6 +15,7 @@ type AstNode struct {
 	CharStart int       // start character of this node
 	CharEnd   int       // end character of this node
 	Child     []AstNode // zero or more child nodes
+	Terminal  bool      // terminal/leaf node - don't attempt any further lexing
 }
 
 type Lexer map[string]NodeLexer

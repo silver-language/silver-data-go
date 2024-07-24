@@ -37,3 +37,11 @@ Can change later if wanted.
 
 
 
+AST node types - generic or specific?
+-------------------------------------
+At the moment I just have a single generic ASTNode that I was intending to return from each lexing phase, so I just end up with a tree of those.
+Do I actually need different ast node structs for each node type, or is that getting ahead of things?
+Is specific node types something i want to eject from parsing instead?
+
+
+
