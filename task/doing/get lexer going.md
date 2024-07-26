@@ -1,5 +1,5 @@
-Get AST generator going
-=======================
+Get Lexer going
+===============
 
 Not working yet.
 Get working.
@@ -43,5 +43,14 @@ At the moment I just have a single generic ASTNode that I was intending to retur
 Do I actually need different ast node structs for each node type, or is that getting ahead of things?
 Is specific node types something i want to eject from parsing instead?
 
+
+Update
+------
+I need to rename some things and set some guidelines.
+Have been going back to some lexing/parsing articles and I need to rename the output of the lexer to something like 'TokenTree'
+The abstract syntax tree (AST) is supposed to be emitted by the parser afaict.
+
+* No proper logic in the lexer - only regex, basic splitting
+* Syntax errors will be the job of the parser
 
 
