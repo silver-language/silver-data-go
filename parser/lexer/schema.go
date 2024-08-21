@@ -3,18 +3,27 @@ Schema
 */
 package lexer
 
-/* need regexes and AST nodes
+/*
  */
 
-type AstNode struct {
-	NodeType  string    // type of node
-	Text      string    // raw text of the node
-	LineStart int       // start line of this node
-	LineEnd   int       // end line of this node
-	CharStart int       // start character of this node
-	CharEnd   int       // end character of this node
-	Child     []AstNode // zero or more child nodes
-	Terminal  bool      // terminal/leaf node - don't attempt any further lexing
+type TokenTree struct {
+	NodeType  string      // type of token
+	Text      string      // raw text of the token
+	LineStart int         // start line of this token
+	LineEnd   int         // end line of this token
+	CharStart int         // start character of this token
+	CharEnd   int         // end character of this token
+	Child     []TokenTree // zero or more child tree nodes
+	Token     []Token     // terminal tokens
+}
+
+type Token struct {
+	NodeType  string // type of token
+	Text      string // raw text of the token
+	LineStart int    // start line of this token
+	LineEnd   int    // end line of this token
+	CharStart int    // start character of this token
+	CharEnd   int    // end character of this token
 }
 
 type Lexer map[string]NodeLexer

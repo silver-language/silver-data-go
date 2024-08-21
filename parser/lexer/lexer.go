@@ -6,13 +6,11 @@ import (
 	"regexp"
 )
 
-// type NodeArray []AstNode
-
 /* LexDocument
  */
-func LexDocument(document string) AstNode {
+func LexDocument(document string) TokenTree {
 
-	abstractSyntaxTree := AstNode{
+	tokenTree := TokenTree{
 		NodeType:  "document",
 		Text:      document,
 		LineStart: 0,
@@ -22,13 +20,13 @@ func LexDocument(document string) AstNode {
 	}
 
 	documentLexer := SilverLexer["document"]
-	Lex(&abstractSyntaxTree, &documentLexer, "document")
-	return abstractSyntaxTree
+	LexTree(&tokenTree, &documentLexer, "document")
+	return tokenTree
 }
 
-/* Lex
+/* LexTree
  */
-func Lex(astNode *AstNode, lexer *NodeLexer, nodeType string) { //AstNode
+func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 
 	// first run any tests
 	// leaving this out for the moment - will come back to
@@ -36,7 +34,7 @@ func Lex(astNode *AstNode, lexer *NodeLexer, nodeType string) { //AstNode
 	// second, try to split this node
 
 	/*
-		result := AstNode{
+		result := TokenTree{
 			NodeType:  nodeType, // type of node
 			Text:      source,   // the raw text of the node
 			LineStart: 1,
@@ -50,25 +48,25 @@ func Lex(astNode *AstNode, lexer *NodeLexer, nodeType string) { //AstNode
 	switch lexer.Splitter {
 	case "lineSplitter":
 		{
-			astNode.Child = linesplitNode(astNode, lexer)
-			lastChild := astNode.Child[len(astNode.Child)-1]
-			astNode.LineEnd = lastChild.LineEnd
-			astNode.CharEnd = lastChild.CharEnd
+			tokenTree.Child = linesplitNode(tokenTree, lexer)
+			lastChild := tokenTree.Child[len(tokenTree.Child)-1]
+			tokenTree.LineEnd = lastChild.LineEnd
+			tokenTree.CharEnd = lastChild.CharEnd
 		}
 	case "subExpression":
 		{
-			astNode.Child = submatchNode(astNode, lexer)
+			tokenTree.Child = submatchNode(tokenTree, lexer)
 		}
 	default:
 		{
-			astNode.NodeType = fmt.Sprintf("%v: node type not found", astNode.NodeType)
+			tokenTree.NodeType = fmt.Sprintf("%v: node type not found", tokenTree.NodeType)
 		}
 	}
 	/*
 		} else {
 			// panic(fmt.Sprintf("Node type not found: %v", nodeType))
 			// or return an error node type??
-			astNode.NodeType = fmt.Sprintf("Node type not found: %v", astNode.NodeType)
+			tokenTree.NodeType = fmt.Sprintf("Node type not found: %v", tokenTree.NodeType)
 		}
 	*/
 
@@ -89,22 +87,22 @@ func Lex(astNode *AstNode, lexer *NodeLexer, nodeType string) { //AstNode
 	//return result
 }
 
-func linesplitNode(astNode *AstNode, lexer *NodeLexer) []AstNode {
+func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
 	re := regexp.MustCompile(lexer.Regex)
-	split := re.Split(astNode.Text, -1)
+	split := re.Split(tokenTree.Text, -1)
 
-	result := []AstNode{}
+	result := []TokenTree{}
 
 	for i := 1; i <= len(split); i++ {
 		result = append(result,
-			AstNode{
+			TokenTree{
 				NodeType:  "line",
 				Text:      split[i-1],
 				LineStart: i,
 				LineEnd:   i,
 				CharStart: 0,
 				CharEnd:   len(split[i-1]),
-				//Child:     []AstNode,
+				//Child:     []TokenTree,
 			},
 		)
 	}
@@ -112,12 +110,12 @@ func linesplitNode(astNode *AstNode, lexer *NodeLexer) []AstNode {
 	return result
 }
 
-func submatchNode(astNode *AstNode, lexer *NodeLexer) []AstNode {
-	result := new([]AstNode)
+func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
+	result := new([]TokenTree)
 
 	re := regexp.MustCompile(lexer.Regex)
 
-	submatch := re.FindStringSubmatch(astNode.Text)
+	submatch := re.FindStringSubmatch(tokenTree.Text)
 	log.Println(submatch)
 	// there needs to be some distinction here
 
