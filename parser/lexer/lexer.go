@@ -28,25 +28,12 @@ func LexDocument(document string) TokenTree {
  */
 func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 
-	// first run any tests
-	// leaving this out for the moment - will come back to
+	// first run any tests 	// leaving this out for the moment - will come back to
 
-	// second, try to split this node
-
-	/*
-		result := TokenTree{
-			NodeType:  nodeType, // type of node
-			Text:      source,   // the raw text of the node
-			LineStart: 1,
-			LineEnd:   1, // the source line of this node
-			CharStart: 1, // start character of this node
-			CharEnd:   1, // end character of this node
-			//Child:     [], // zero or more child nodes
-		}
-	*/
+	// second, split this node
 
 	switch lexer.Splitter {
-	case "lineSplitter":
+	case "documentSplitter":
 		{
 			tokenTree.Child = linesplitNode(tokenTree, lexer)
 			lastChild := tokenTree.Child[len(tokenTree.Child)-1]

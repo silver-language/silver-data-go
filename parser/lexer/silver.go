@@ -2,7 +2,7 @@ package lexer
 
 var SilverLexer = Lexer{
 	"document": NodeLexer{
-		Splitter: "lineSplitter",
+		Splitter: "documentSplitter",
 		Regex:    `\n`,
 		Subexp: []Submatch{
 			{

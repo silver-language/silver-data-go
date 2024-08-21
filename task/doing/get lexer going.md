@@ -5,6 +5,15 @@ Not working yet.
 Get working.
 
 
+- [x] document-to-line splitter
+- [x] reorganise test output folders
+- [x] combine lexer items into one package
+- [x] rename AST to TokenTree
+- [x] rename .ast test output to .tt
+- [ ]
+
+
+
 Splitters
 ---------
 
@@ -55,3 +64,8 @@ The abstract syntax tree (AST) is supposed to be emitted by the parser afaict.
 
 Also have gone back and revisited name-type-value to clarify some concepts.
 Going forward will treat types and values as distinct entities.
+
+
+Back to work on the Lexer
+-------------------------
+
