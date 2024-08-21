@@ -2,6 +2,8 @@
 
 Examples:
 go run . -task=test
+go run . -task=generate
+go run . -task=generate -directory=test/simple/
 */
 
 package main

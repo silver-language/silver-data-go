@@ -24,7 +24,7 @@ operations:
 test:
 	calculate a set set based upon folders/filters/formats
 	read each file
-		generate AST
+		generate TT,AST
 		stringify
 		record comparison against existing output
 	return test results
@@ -32,7 +32,7 @@ test:
 regenerate output:
 	calculate a set set based upon folders/filters/formats
 	read each input file
-		generate AST
+		generate TT,AST
 		stringify
 		write result
 	return output rewrites
@@ -131,7 +131,7 @@ func TestFile(directory string, fileName string) {
 		input := ReadFile(filePath)
 
 		abstractSyntaxTree := lexer.LexDocument(input)
-		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, filePath) //!!
+		outputFilepath := fmt.Sprintf("%s.tt.json", outputFolder, filePath) //!!
 		//log.Printf("outputFilepath: %v \n", outputFilepath)
 
 		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
@@ -152,7 +152,7 @@ func GenerateOutputFile(directory string, fileName string) {
 	input := file.Read(filePath)
 
 	abstractSyntaxTree := lexer.LexDocument(input)
-	outputFilepath := fmt.Sprintf("%s.ast.json", filePath) //!!
+	outputFilepath := fmt.Sprintf("%s.tt.json", filePath) //!!
 	log.Printf("outputFilepath: %v \n", outputFilepath)
 
 	json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
