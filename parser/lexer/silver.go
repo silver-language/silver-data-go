@@ -1,4 +1,4 @@
-package schema
+package lexer
 
 var SilverLexer = Lexer{
 	"document": NodeLexer{

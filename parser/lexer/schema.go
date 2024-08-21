@@ -1,11 +1,10 @@
 /*
 Schema
 */
-package schema
+package lexer
 
 /* need regexes and AST nodes
-https://pkg.go.dev/math/big
-*/
+ */
 
 type AstNode struct {
 	NodeType  string    // type of node

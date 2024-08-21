@@ -4,16 +4,15 @@ import (
 	"fmt"
 	"log"
 	"regexp"
-	"silver-data/parser-go/schema"
 )
 
-// type NodeArray []schema.AstNode
+// type NodeArray []AstNode
 
 /* LexDocument
  */
-func LexDocument(document string) schema.AstNode {
+func LexDocument(document string) AstNode {
 
-	abstractSyntaxTree := schema.AstNode{
+	abstractSyntaxTree := AstNode{
 		NodeType:  "document",
 		Text:      document,
 		LineStart: 0,
@@ -22,14 +21,14 @@ func LexDocument(document string) schema.AstNode {
 		CharEnd:   0,
 	}
 
-	documentLexer := schema.SilverLexer["document"]
+	documentLexer := SilverLexer["document"]
 	Lex(&abstractSyntaxTree, &documentLexer, "document")
 	return abstractSyntaxTree
 }
 
 /* Lex
  */
-func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //schema.AstNode
+func Lex(astNode *AstNode, lexer *NodeLexer, nodeType string) { //AstNode
 
 	// first run any tests
 	// leaving this out for the moment - will come back to
@@ -37,7 +36,7 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 	// second, try to split this node
 
 	/*
-		result := schema.AstNode{
+		result := AstNode{
 			NodeType:  nodeType, // type of node
 			Text:      source,   // the raw text of the node
 			LineStart: 1,
@@ -90,22 +89,22 @@ func Lex(astNode *schema.AstNode, lexer *schema.NodeLexer, nodeType string) { //
 	//return result
 }
 
-func linesplitNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.AstNode {
+func linesplitNode(astNode *AstNode, lexer *NodeLexer) []AstNode {
 	re := regexp.MustCompile(lexer.Regex)
 	split := re.Split(astNode.Text, -1)
 
-	result := []schema.AstNode{}
+	result := []AstNode{}
 
 	for i := 1; i <= len(split); i++ {
 		result = append(result,
-			schema.AstNode{
+			AstNode{
 				NodeType:  "line",
 				Text:      split[i-1],
 				LineStart: i,
 				LineEnd:   i,
 				CharStart: 0,
 				CharEnd:   len(split[i-1]),
-				//Child:     []schema.AstNode,
+				//Child:     []AstNode,
 			},
 		)
 	}
@@ -113,8 +112,8 @@ func linesplitNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.As
 	return result
 }
 
-func submatchNode(astNode *schema.AstNode, lexer *schema.NodeLexer) []schema.AstNode {
-	result := new([]schema.AstNode)
+func submatchNode(astNode *AstNode, lexer *NodeLexer) []AstNode {
+	result := new([]AstNode)
 
 	re := regexp.MustCompile(lexer.Regex)
 
