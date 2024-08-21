@@ -10,6 +10,7 @@ Get working.
 - [x] combine lexer items into one package
 - [x] rename AST to TokenTree
 - [x] rename .ast test output to .tt
+- [x] add ability to test single file
 - [ ]
 
 

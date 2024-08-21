@@ -4,6 +4,7 @@ Examples:
 go run . -task=test
 go run . -task=generate
 go run . -task=generate -directory=test/simple/
+go run . -task=generateFile -file=test/simple/array.agd
 */
 
 package main
@@ -22,9 +23,11 @@ func main() {
 	log.Println("Task:", options.task)
 	switch options.task {
 	case "test":
-		test.TestDirectory(options.directory)
+		test.TestDirectory(options.directory) // currently doesn't do much
 	case "generate":
 		test.GenerateDirectoryOutput(options.directory)
+	case "generateFile":
+		test.GenerateFileOutput(options.file)
 	default:
 		{
 			log.Println("No matching task")

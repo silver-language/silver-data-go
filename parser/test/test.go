@@ -85,7 +85,8 @@ func TestDirectory(directoryPath string) {
 	//return testResults
 } //TestDirectory
 
-// GenerateDirectoryOutput
+/* GenerateDirectoryOutput
+ */
 func GenerateDirectoryOutput(directoryPath string) {
 	directoryItems, err := os.ReadDir(directoryPath)
 	var itemPath string
@@ -104,14 +105,14 @@ func GenerateDirectoryOutput(directoryPath string) {
 			itemPath = fmt.Sprintf("%s%s/", directoryPath, directoryItem.Name())
 			GenerateDirectoryOutput(itemPath)
 		} else {
-			//itemPath = fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
+			filePath := fmt.Sprintf("%s%s", directoryPath, directoryItem.Name())
 			if isInputFile(directoryItem.Name()) {
-				GenerateOutputFile(directoryPath, directoryItem.Name())
+				GenerateFileOutput(filePath)
 			}
 		}
 	}
 	//return testResults
-} //GenerateDirectoryOutput
+} /* GenerateDirectoryOutput */
 
 func isInputFile(filePath string) bool {
 	result := false
@@ -121,6 +122,12 @@ func isInputFile(filePath string) bool {
 	return result
 }
 
+/*
+	TestFile
+
+currently does nothing
+needs to generate (in-memory) tt,ast output and compare with those on disk
+*/
 func TestFile(directory string, fileName string) {
 	log.Printf("Test file: %v \n", fileName)
 
@@ -143,11 +150,12 @@ func TestFile(directory string, fileName string) {
 
 }
 
-func GenerateOutputFile(directory string, fileName string) {
-	log.Printf("Generate output: %v \n", fileName)
+/* GenerateFileOutput
+ */
+func GenerateFileOutput(filePath string) {
+	log.Printf("Generate output file: %v \n", filePath)
 
 	//log.Printf("Test %v: %v \n", index, thisFile)
-	filePath := fmt.Sprintf("%s%s", directory, fileName)
 
 	input := file.Read(filePath)
 
@@ -161,5 +169,4 @@ func GenerateOutputFile(directory string, fileName string) {
 	}
 
 	file.Write(outputFilepath, string(json))
-
 }
