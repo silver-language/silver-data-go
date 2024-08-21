@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 	"silver-data/parser-go/file"
-	"silver-data/parser-go/lexing"
+	"silver-data/parser-go/lexer"
 	"strings"
 )
 
@@ -130,7 +130,7 @@ func TestFile(directory string, fileName string) {
 
 		input := ReadFile(filePath)
 
-		abstractSyntaxTree := lexing.LexDocument(input)
+		abstractSyntaxTree := lexer.LexDocument(input)
 		outputFilepath := fmt.Sprintf("%s.ast.json", outputFolder, filePath) //!!
 		//log.Printf("outputFilepath: %v \n", outputFilepath)
 
@@ -151,7 +151,7 @@ func GenerateOutputFile(directory string, fileName string) {
 
 	input := file.Read(filePath)
 
-	abstractSyntaxTree := lexing.LexDocument(input)
+	abstractSyntaxTree := lexer.LexDocument(input)
 	outputFilepath := fmt.Sprintf("%s.ast.json", filePath) //!!
 	log.Printf("outputFilepath: %v \n", outputFilepath)
 

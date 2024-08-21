@@ -47,10 +47,11 @@ Is specific node types something i want to eject from parsing instead?
 Update
 ------
 I need to rename some things and set some guidelines.
-Have been going back to some lexing/parsing articles and I need to rename the output of the lexer to something like 'TokenTree'
+Have been going back to some lexing/parsing articles and I need to rename the output of the lexer to something like 'TokenTree'.
 The abstract syntax tree (AST) is supposed to be emitted by the parser afaict.
 
 * No proper logic in the lexer - only regex, basic splitting
 * Syntax errors will be the job of the parser
 
-
+Also have gone back and revisited name-type-value to clarify some concepts.
+Going forward will treat types and values as distinct entities.
