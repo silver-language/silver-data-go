@@ -13,7 +13,8 @@
 			"LineEnd": 1,
 			"CharStart": 0,
 			"CharEnd": 4,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -22,7 +23,8 @@
 			"LineEnd": 2,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -31,7 +33,8 @@
 			"LineEnd": 3,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -40,7 +43,8 @@
 			"LineEnd": 4,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -49,7 +53,8 @@
 			"LineEnd": 5,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -58,7 +63,8 @@
 			"LineEnd": 6,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -67,7 +73,8 @@
 			"LineEnd": 7,
 			"CharStart": 0,
 			"CharEnd": 2,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -76,7 +83,8 @@
 			"LineEnd": 8,
 			"CharStart": 0,
 			"CharEnd": 6,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -85,7 +93,8 @@
 			"LineEnd": 9,
 			"CharStart": 0,
 			"CharEnd": 6,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -94,7 +103,9 @@
 			"LineEnd": 10,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Child": null
+			"Child": null,
+			"Token": null
 		}
-	]
+	],
+	"Token": null
 }

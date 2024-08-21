@@ -13,7 +13,8 @@
 			"LineEnd": 1,
 			"CharStart": 0,
 			"CharEnd": 14,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -22,7 +23,8 @@
 			"LineEnd": 2,
 			"CharStart": 0,
 			"CharEnd": 5,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -31,7 +33,8 @@
 			"LineEnd": 3,
 			"CharStart": 0,
 			"CharEnd": 5,
-			"Child": null
+			"Child": null,
+			"Token": null
 		},
 		{
 			"NodeType": "line",
@@ -40,7 +43,9 @@
 			"LineEnd": 4,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Child": null
+			"Child": null,
+			"Token": null
 		}
-	]
+	],
+	"Token": null
 }
