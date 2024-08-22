@@ -32,6 +32,8 @@ func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 
 	// second, split this node
 
+	log.Printf("LexTree: %v %v \n", nodeType, lexer.Splitter)
+
 	switch lexer.Splitter {
 	case "documentSplitter":
 		{
@@ -49,19 +51,6 @@ func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 			tokenTree.NodeType = fmt.Sprintf("%v: node type not found", tokenTree.NodeType)
 		}
 	}
-	/*
-		} else {
-			// panic(fmt.Sprintf("Node type not found: %v", nodeType))
-			// or return an error node type??
-			tokenTree.NodeType = fmt.Sprintf("Node type not found: %v", tokenTree.NodeType)
-		}
-	*/
-
-	/* given some text and a node type, attempt to split it into nodes
-	there will need to be two levels to this
-	*/
-
-	//log.Println(abstractSyntaxTree)
 
 	/*
 		run the node through its tests
@@ -71,7 +60,11 @@ func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 		else if there is no match eject or record error
 	*/
 
-	//return result
+	for _, item := range tokenTree.Child {
+		log.Printf("Lex child: %v %v \n", item.NodeType, &item)
+		//LexTree(&item, lexer, item.NodeType)
+	}
+
 }
 
 func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
