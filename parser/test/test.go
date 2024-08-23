@@ -137,11 +137,11 @@ func TestFile(directory string, fileName string) {
 
 		input := ReadFile(filePath)
 
-		abstractSyntaxTree := lexer.LexDocument(input)
+		tokenTree := lexer.LexDocument(input)
 		outputFilepath := fmt.Sprintf("%s.tt.json", outputFolder, filePath) //!!
 		//log.Printf("outputFilepath: %v \n", outputFilepath)
 
-		json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+		json, err := json.MarshalIndent(tokenTree, "", "	")
 		if err != nil {
 			log.Fatalf(err.Error())
 		}
@@ -159,11 +159,13 @@ func GenerateFileOutput(filePath string) {
 
 	input := file.Read(filePath)
 
-	abstractSyntaxTree := lexer.LexDocument(input)
+	tokenTree := lexer.LexDocument(input)
+	//log.Printf("tokenTree: %v \n", tokenTree)
+
 	outputFilepath := fmt.Sprintf("%s.tt.json", filePath) //!!
 	log.Printf("outputFilepath: %v \n", outputFilepath)
 
-	json, err := json.MarshalIndent(abstractSyntaxTree, "", "	")
+	json, err := json.MarshalIndent(tokenTree, "", "	")
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
