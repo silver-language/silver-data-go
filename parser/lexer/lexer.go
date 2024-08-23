@@ -4,7 +4,10 @@ import (
 	"fmt"
 	"log"
 	"regexp"
+	"silver-data/parser-go/util"
 )
+
+var lexer = SilverLexer
 
 /* LexDocument
  */
@@ -19,32 +22,29 @@ func LexDocument(document string) TokenTree {
 		CharEnd:   0,
 	}
 
-	documentLexer := SilverLexer["document"]
+	documentLexer := lexer["document"]
 	LexTree(&tokenTree, &documentLexer, "document")
 	return tokenTree
 }
 
 /* LexTree
  */
-func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
+func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
+
+	log.Printf("LexTree: %v, %v \n", nodeType, nodeLexer.Splitter)
 
 	// first run any tests 	// leaving this out for the moment - will come back to
 
 	// second, split this node
 
-	log.Printf("LexTree: %v %v \n", nodeType, lexer.Splitter)
-
-	switch lexer.Splitter {
+	switch nodeLexer.Splitter {
 	case "documentSplitter":
 		{
-			tokenTree.Child = linesplitNode(tokenTree, lexer)
-			lastChild := tokenTree.Child[len(tokenTree.Child)-1]
-			tokenTree.LineEnd = lastChild.LineEnd
-			tokenTree.CharEnd = lastChild.CharEnd
+			linesplitNode(tokenTree, nodeLexer)
 		}
 	case "subExpression":
 		{
-			tokenTree.Child = submatchNode(tokenTree, lexer)
+			submatchNode(tokenTree, nodeLexer)
 		}
 	default:
 		{
@@ -60,14 +60,17 @@ func LexTree(tokenTree *TokenTree, lexer *NodeLexer, nodeType string) {
 		else if there is no match eject or record error
 	*/
 
-	for _, item := range tokenTree.Child {
-		log.Printf("Lex child: %v %v \n", item.NodeType, &item)
-		//LexTree(&item, lexer, item.NodeType)
+	for index, item := range tokenTree.Child {
+		log.Printf("Lex child: %v, %v \n", item.NodeType, &item)
+		itemLexer := lexer[item.NodeType]
+		LexTree(&tokenTree.Child[index], &itemLexer, item.NodeType)
 	}
 
 }
 
-func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
+/* linesplitNode
+ */
+func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) {
 	re := regexp.MustCompile(lexer.Regex)
 	split := re.Split(tokenTree.Text, -1)
 
@@ -87,19 +90,40 @@ func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
 		)
 	}
 
-	return result
+	tokenTree.Child = result
+	lastChild := tokenTree.Child[len(tokenTree.Child)-1]
+	tokenTree.LineEnd = lastChild.LineEnd
+	tokenTree.CharEnd = lastChild.CharEnd
 }
 
-func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) []TokenTree {
-	result := new([]TokenTree)
+/* submatchNode
+ */
+func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) { //[]TokenTree
+	//result := new([]TokenTree)
 
 	re := regexp.MustCompile(lexer.Regex)
 
-	submatch := re.FindStringSubmatch(tokenTree.Text)
+	submatch := util.FindSubmatches(tokenTree.Text, *re)
+
 	log.Println(submatch)
 	// there needs to be some distinction here
 
-	return *result
+	for i, value := range submatch[1:] {
+		tokenTree.Child = append(tokenTree.Child,
+			TokenTree{
+				NodeType:  lexer.Subexp[i].nodeType,
+				Text:      value.String,
+				LineStart: tokenTree.LineStart,
+				LineEnd:   tokenTree.LineEnd,
+				CharStart: value.Start,
+				CharEnd:   value.End,
+				//Child:     []TokenTree,
+			},
+		)
+
+	}
+
+	//return *result
 }
 
 /* I'm getting confused so here's an outline.
