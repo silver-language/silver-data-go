@@ -25,7 +25,9 @@ var SilverLexer = Lexer{
 			},
 		},
 	},
-	"indent": NodeLexer{},
+	"indent": NodeLexer{
+		Splitter: "none",
+	},
 	/*
 		"statement": NodeLexer{
 			nodeType: "statement",

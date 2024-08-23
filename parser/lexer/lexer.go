@@ -46,6 +46,10 @@ func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
 		{
 			submatchNode(tokenTree, nodeLexer)
 		}
+	case "none":
+		{
+			// createTerminalNode()
+		}
 	default:
 		{
 			tokenTree.NodeType = fmt.Sprintf("%v: node type not found", tokenTree.NodeType)
@@ -61,7 +65,7 @@ func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
 	*/
 
 	for index, item := range tokenTree.Child {
-		log.Printf("Lex child: %v, %v \n", item.NodeType, &item)
+		//log.Printf("Lex child: %v, %v \n", item.NodeType, &item)
 		itemLexer := lexer[item.NodeType]
 		LexTree(&tokenTree.Child[index], &itemLexer, item.NodeType)
 	}
@@ -124,6 +128,10 @@ func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) { //[]TokenTree
 	}
 
 	//return *result
+}
+
+func createTerminalNode(tokenTree *TokenTree, lexer *NodeLexer) {
+
 }
 
 /* I'm getting confused so here's an outline.

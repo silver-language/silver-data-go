@@ -15,7 +15,7 @@
 			"CharEnd": 14,
 			"Child": [
 				{
-					"NodeType": "indent: node type not found",
+					"NodeType": "indent",
 					"Text": "",
 					"LineStart": 1,
 					"LineEnd": 1,
@@ -46,7 +46,7 @@
 			"CharEnd": 5,
 			"Child": [
 				{
-					"NodeType": "indent: node type not found",
+					"NodeType": "indent",
 					"Text": "\t",
 					"LineStart": 2,
 					"LineEnd": 2,
@@ -77,7 +77,7 @@
 			"CharEnd": 5,
 			"Child": [
 				{
-					"NodeType": "indent: node type not found",
+					"NodeType": "indent",
 					"Text": "\t",
 					"LineStart": 3,
 					"LineEnd": 3,
@@ -108,7 +108,7 @@
 			"CharEnd": 0,
 			"Child": [
 				{
-					"NodeType": "indent: node type not found",
+					"NodeType": "indent",
 					"Text": "",
 					"LineStart": 4,
 					"LineEnd": 4,
