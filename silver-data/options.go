@@ -10,7 +10,7 @@ type options struct {
 
 func getOptions() options {
 	var result options
-	taskPtr := flag.String("task", "none", "The task for the parser to perform")
+	taskPtr := flag.String("task", "none", "The task to perform")
 	directoryPtr := flag.String("directory", "./test/", "Directory for tests")
 	filePtr := flag.String("file", "./test/simple/array.agd", "File to test")
 	flag.Parse()

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"regexp"
-	"silver-data/parser-go/util"
+	"silver-language/silver-data/util"
 )
 
 var lexer = SilverLexer

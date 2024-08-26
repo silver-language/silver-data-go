@@ -1,4 +1,4 @@
-/* silver-data-parser-go
+/* silver-data
 
 Examples:
 go run . -task=test
@@ -11,12 +11,12 @@ package main
 
 import (
 	"log"
-	"silver-data/parser-go/test"
+	"silver-language/silver-data/test"
 )
 
 func main() {
 	log.SetFlags(log.Lshortfile)
-	log.Println("Module: silver-data-parser-go")
+	log.Println("Module: silver-data")
 
 	options := getOptions()
 

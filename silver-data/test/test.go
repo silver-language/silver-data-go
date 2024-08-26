@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"silver-data/parser-go/file"
-	"silver-data/parser-go/lexer"
+	"silver-language/silver-data/file"
+	"silver-language/silver-data/lexer"
 	"strings"
 )
 

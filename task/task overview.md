@@ -1,7 +1,7 @@
 Task Overview
 =============
 
-This is a rough outline of the high level tasks for the silver-data parser.
+This is a rough outline of the high level tasks for silver-data.
 
 1. [Lexer](#1-lexer)
 2. [Parser](#2-parser)
