@@ -5,8 +5,8 @@ This is a rough outline of the high level tasks for the silver-data parser.
 
 1. [Lexer](#1-lexer)
 2. [Parser](#2-parser)
-3. [Testing](#3-testing)
-4. [Use silver-data from client program](#3-use-silver-data-from-client-program)
+3. [Use silver-data from client program](#3-use-silver-data-from-client-program)
+4. [Testing](#4-testing)
 5. [Versioning](#5-versioning)
 6. [Publishing](#6-publishing)
 
