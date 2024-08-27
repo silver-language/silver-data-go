@@ -1,11 +1,11 @@
-package file
+package util
 
 import (
 	"log"
 	"os"
 )
 
-func Read(filepath string) string {
+func FileRead(filepath string) string {
 	// Open file
 	file, err := os.Open(filepath)
 	if err != nil {
@@ -25,7 +25,7 @@ func Read(filepath string) string {
 	return string(content)
 }
 
-func Write(filepath string, content string) {
+func FileWrite(filepath string, content string) {
 	//log.Printf("filepath: %v \n", filepath)
 	err := os.WriteFile(filepath, []byte(content), 0644)
 	if err != nil {

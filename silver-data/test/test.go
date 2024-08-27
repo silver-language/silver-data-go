@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"silver-language/silver-data/file"
 	"silver-language/silver-data/lexer"
+	"silver-language/silver-data/util"
 	"strings"
 )
 
@@ -157,7 +157,7 @@ func GenerateFileOutput(filePath string) {
 
 	//log.Printf("Test %v: %v \n", index, thisFile)
 
-	input := file.Read(filePath)
+	input := util.FileRead(filePath)
 
 	tokenTree := lexer.LexDocument(input)
 	//log.Printf("tokenTree: %v \n", tokenTree)
@@ -170,5 +170,5 @@ func GenerateFileOutput(filePath string) {
 		log.Fatalf(err.Error())
 	}
 
-	file.Write(outputFilepath, string(json))
+	util.FileWrite(outputFilepath, string(json))
 }
