@@ -26,14 +26,17 @@ Read in silver-data document and convert to token stream/token tree
 
 Take token tree and run through parsing phases to output usable data structure
 
-
+* combine blocks together
+* report syntax errors
+* map AST nodes back to source document
 
 3 Use silver-data from client program
 -------------------------------------
 
-* Read in silver-data from another program
+* From a different module import the silver-data module
+* Use silver-data module to read and use local config
 * Construct/modify silver-data structures in memory
-* Serialize silver-data structure back to document for storage
+* Serialize silver-data structure back to document/file for storage
 
 
 4 Testing
@@ -41,6 +44,10 @@ Take token tree and run through parsing phases to output usable data structure
 
 Concurrent with 1,2,3 create test inputs and outputs
 
+* document to token tree/stream
+* token to AST
+* AST to structure
+* silver structure to document
 
 
 5 Versioning
