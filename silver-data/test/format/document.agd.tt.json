@@ -1,848 +1,848 @@
 {
-	"NodeType": "document",
+	"Type": "document",
 	"Text": "\n\nmyDoc: Document\n\tTitle 'This is the heading of the document'\n\n\tParagraph\n\t\tlorum ipsum\n\t\tdolor sit amet\n\n\tLink http://localhost/help\n\n\tUnorderedList\n\t\titem 1\n\t\titem 2\n\t\titem 3\n\n\tOrderedList\n\t\tdo this\n\t\tthen this\n\t\tfinally this\n\n\tCode\n\t\t10 print \"Hello world\"\n\t\t20 goto 10\nmyDoc end\n\n",
 	"LineStart": 0,
 	"LineEnd": 27,
 	"CharStart": 0,
 	"CharEnd": 0,
+	"Split": true,
 	"Child": [
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 1,
 			"LineEnd": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 1,
 					"LineEnd": 1,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 1,
 					"LineEnd": 1,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 2,
 			"LineEnd": 2,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 2,
 					"LineEnd": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 2,
 					"LineEnd": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "myDoc: Document",
 			"LineStart": 3,
 			"LineEnd": 3,
 			"CharStart": 0,
 			"CharEnd": 15,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 3,
 					"LineEnd": 3,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "myDoc: Document",
 					"LineStart": 3,
 					"LineEnd": 3,
 					"CharStart": 0,
 					"CharEnd": 15,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tTitle 'This is the heading of the document'",
 			"LineStart": 4,
 			"LineEnd": 4,
 			"CharStart": 0,
 			"CharEnd": 44,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 4,
 					"LineEnd": 4,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "Title 'This is the heading of the document'",
 					"LineStart": 4,
 					"LineEnd": 4,
 					"CharStart": 1,
 					"CharEnd": 44,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 5,
 			"LineEnd": 5,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 5,
 					"LineEnd": 5,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 5,
 					"LineEnd": 5,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tParagraph",
 			"LineStart": 6,
 			"LineEnd": 6,
 			"CharStart": 0,
 			"CharEnd": 10,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 6,
 					"LineEnd": 6,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "Paragraph",
 					"LineStart": 6,
 					"LineEnd": 6,
 					"CharStart": 1,
 					"CharEnd": 10,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\tlorum ipsum",
 			"LineStart": 7,
 			"LineEnd": 7,
 			"CharStart": 0,
 			"CharEnd": 13,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 7,
 					"LineEnd": 7,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "lorum ipsum",
 					"LineStart": 7,
 					"LineEnd": 7,
 					"CharStart": 2,
 					"CharEnd": 13,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\tdolor sit amet",
 			"LineStart": 8,
 			"LineEnd": 8,
 			"CharStart": 0,
 			"CharEnd": 16,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 8,
 					"LineEnd": 8,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "dolor sit amet",
 					"LineStart": 8,
 					"LineEnd": 8,
 					"CharStart": 2,
 					"CharEnd": 16,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 9,
 			"LineEnd": 9,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 9,
 					"LineEnd": 9,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 9,
 					"LineEnd": 9,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tLink http://localhost/help",
 			"LineStart": 10,
 			"LineEnd": 10,
 			"CharStart": 0,
 			"CharEnd": 27,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 10,
 					"LineEnd": 10,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "Link http://localhost/help",
 					"LineStart": 10,
 					"LineEnd": 10,
 					"CharStart": 1,
 					"CharEnd": 27,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 11,
 			"LineEnd": 11,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 11,
 					"LineEnd": 11,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 11,
 					"LineEnd": 11,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tUnorderedList",
 			"LineStart": 12,
 			"LineEnd": 12,
 			"CharStart": 0,
 			"CharEnd": 14,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 12,
 					"LineEnd": 12,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "UnorderedList",
 					"LineStart": 12,
 					"LineEnd": 12,
 					"CharStart": 1,
 					"CharEnd": 14,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\titem 1",
 			"LineStart": 13,
 			"LineEnd": 13,
 			"CharStart": 0,
 			"CharEnd": 8,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 13,
 					"LineEnd": 13,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "item 1",
 					"LineStart": 13,
 					"LineEnd": 13,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\titem 2",
 			"LineStart": 14,
 			"LineEnd": 14,
 			"CharStart": 0,
 			"CharEnd": 8,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 14,
 					"LineEnd": 14,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "item 2",
 					"LineStart": 14,
 					"LineEnd": 14,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\titem 3",
 			"LineStart": 15,
 			"LineEnd": 15,
 			"CharStart": 0,
 			"CharEnd": 8,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 15,
 					"LineEnd": 15,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "item 3",
 					"LineStart": 15,
 					"LineEnd": 15,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 16,
 			"LineEnd": 16,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 16,
 					"LineEnd": 16,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 16,
 					"LineEnd": 16,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tOrderedList",
 			"LineStart": 17,
 			"LineEnd": 17,
 			"CharStart": 0,
 			"CharEnd": 12,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 17,
 					"LineEnd": 17,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "OrderedList",
 					"LineStart": 17,
 					"LineEnd": 17,
 					"CharStart": 1,
 					"CharEnd": 12,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\tdo this",
 			"LineStart": 18,
 			"LineEnd": 18,
 			"CharStart": 0,
 			"CharEnd": 9,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 18,
 					"LineEnd": 18,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "do this",
 					"LineStart": 18,
 					"LineEnd": 18,
 					"CharStart": 2,
 					"CharEnd": 9,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\tthen this",
 			"LineStart": 19,
 			"LineEnd": 19,
 			"CharStart": 0,
 			"CharEnd": 11,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 19,
 					"LineEnd": 19,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "then this",
 					"LineStart": 19,
 					"LineEnd": 19,
 					"CharStart": 2,
 					"CharEnd": 11,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\tfinally this",
 			"LineStart": 20,
 			"LineEnd": 20,
 			"CharStart": 0,
 			"CharEnd": 14,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 20,
 					"LineEnd": 20,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "finally this",
 					"LineStart": 20,
 					"LineEnd": 20,
 					"CharStart": 2,
 					"CharEnd": 14,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 21,
 			"LineEnd": 21,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 21,
 					"LineEnd": 21,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 21,
 					"LineEnd": 21,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\tCode",
 			"LineStart": 22,
 			"LineEnd": 22,
 			"CharStart": 0,
 			"CharEnd": 5,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t",
 					"LineStart": 22,
 					"LineEnd": 22,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "Code",
 					"LineStart": 22,
 					"LineEnd": 22,
 					"CharStart": 1,
 					"CharEnd": 5,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\t10 print \"Hello world\"",
 			"LineStart": 23,
 			"LineEnd": 23,
 			"CharStart": 0,
 			"CharEnd": 24,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 23,
 					"LineEnd": 23,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "10 print \"Hello world\"",
 					"LineStart": 23,
 					"LineEnd": 23,
 					"CharStart": 2,
 					"CharEnd": 24,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "\t\t20 goto 10",
 			"LineStart": 24,
 			"LineEnd": 24,
 			"CharStart": 0,
 			"CharEnd": 12,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "\t\t",
 					"LineStart": 24,
 					"LineEnd": 24,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "20 goto 10",
 					"LineStart": 24,
 					"LineEnd": 24,
 					"CharStart": 2,
 					"CharEnd": 12,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "myDoc end",
 			"LineStart": 25,
 			"LineEnd": 25,
 			"CharStart": 0,
 			"CharEnd": 9,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 25,
 					"LineEnd": 25,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "myDoc end",
 					"LineStart": 25,
 					"LineEnd": 25,
 					"CharStart": 0,
 					"CharEnd": 9,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 26,
 			"LineEnd": 26,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 26,
 					"LineEnd": 26,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 26,
 					"LineEnd": 26,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		},
 		{
-			"NodeType": "line",
+			"Type": "line",
 			"Text": "",
 			"LineStart": 27,
 			"LineEnd": 27,
 			"CharStart": 0,
 			"CharEnd": 0,
+			"Split": true,
 			"Child": [
 				{
-					"NodeType": "indent",
+					"Type": "indent",
 					"Text": "",
 					"LineStart": 27,
 					"LineEnd": 27,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				},
 				{
-					"NodeType": "statement: node type not found",
+					"Type": "statement: node type not found",
 					"Text": "",
 					"LineStart": 27,
 					"LineEnd": 27,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Child": null,
-					"Token": null
+					"Split": false,
+					"Child": null
 				}
-			],
-			"Token": null
+			]
 		}
-	],
-	"Token": null
+	]
 }

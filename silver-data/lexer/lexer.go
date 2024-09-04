@@ -11,25 +11,27 @@ var lexer = SilverLexer
 
 /* LexDocument
  */
-func LexDocument(document string) TokenTree {
+func LexDocument(document string) Token {
 
-	tokenTree := TokenTree{
-		NodeType:  "document",
+	token := Token{
+		Type:      "document",
 		Text:      document,
 		LineStart: 0,
 		LineEnd:   0,
 		CharStart: 0,
 		CharEnd:   0,
+		Split:     true,
+		Child:     []Token{},
 	}
 
 	documentLexer := lexer["document"]
-	LexTree(&tokenTree, &documentLexer, "document")
-	return tokenTree
+	LexTree(&token, &documentLexer, "document")
+	return token
 }
 
 /* LexTree
  */
-func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
+func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
 
 	log.Printf("LexTree: %v, %v \n", nodeType, nodeLexer.Splitter)
 
@@ -40,11 +42,11 @@ func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
 	switch nodeLexer.Splitter {
 	case "documentSplitter":
 		{
-			linesplitNode(tokenTree, nodeLexer)
+			linesplitNode(token, nodeLexer)
 		}
 	case "subExpression":
 		{
-			submatchNode(tokenTree, nodeLexer)
+			submatchNode(token, nodeLexer)
 		}
 	case "none":
 		{
@@ -52,7 +54,7 @@ func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
 		}
 	default:
 		{
-			tokenTree.NodeType = fmt.Sprintf("%v: node type not found", tokenTree.NodeType)
+			token.Type = fmt.Sprintf("%v: node type not found", token.Type)
 		}
 	}
 
@@ -64,64 +66,65 @@ func LexTree(tokenTree *TokenTree, nodeLexer *NodeLexer, nodeType string) {
 		else if there is no match eject or record error
 	*/
 
-	for index, item := range tokenTree.Child {
-		//log.Printf("Lex child: %v, %v \n", item.NodeType, &item)
-		itemLexer := lexer[item.NodeType]
-		LexTree(&tokenTree.Child[index], &itemLexer, item.NodeType)
+	for index, item := range token.Child {
+		//log.Printf("Lex child: %v, %v \n", item.Type, &item)
+		itemLexer := lexer[item.Type]
+		LexTree(&token.Child[index], &itemLexer, item.Type)
 	}
 
 }
 
 /* linesplitNode
  */
-func linesplitNode(tokenTree *TokenTree, lexer *NodeLexer) {
+func linesplitNode(token *Token, lexer *NodeLexer) {
 	re := regexp.MustCompile(lexer.Regex)
-	split := re.Split(tokenTree.Text, -1)
+	split := re.Split(token.Text, -1)
 
-	result := []TokenTree{}
+	result := []Token{}
 
 	for i := 1; i <= len(split); i++ {
 		result = append(result,
-			TokenTree{
-				NodeType:  "line",
+			Token{
+				Type:      "line",
 				Text:      split[i-1],
 				LineStart: i,
 				LineEnd:   i,
 				CharStart: 0,
 				CharEnd:   len(split[i-1]),
-				//Child:     []TokenTree,
+				Split:     true,
+				Child:     []Token{},
 			},
 		)
 	}
 
-	tokenTree.Child = result
-	lastChild := tokenTree.Child[len(tokenTree.Child)-1]
-	tokenTree.LineEnd = lastChild.LineEnd
-	tokenTree.CharEnd = lastChild.CharEnd
+	token.Child = result
+	lastChild := token.Child[len(token.Child)-1]
+	token.LineEnd = lastChild.LineEnd
+	token.CharEnd = lastChild.CharEnd
 }
 
 /* submatchNode
  */
-func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) { //[]TokenTree
-	//result := new([]TokenTree)
+func submatchNode(token *Token, lexer *NodeLexer) { //[]Token
+	//result := new([]Token)
 
 	re := regexp.MustCompile(lexer.Regex)
 
-	submatch := util.FindSubmatches(tokenTree.Text, *re)
+	submatch := util.FindSubmatches(token.Text, *re)
 
 	log.Println(submatch)
 	// there needs to be some distinction here
 
 	for i, value := range submatch[1:] {
-		tokenTree.Child = append(tokenTree.Child,
-			TokenTree{
-				NodeType:  lexer.Subexp[i].nodeType,
+		token.Child = append(token.Child,
+			Token{
+				Type:      lexer.Subexp[i].nodeType,
 				Text:      value.String,
-				LineStart: tokenTree.LineStart,
-				LineEnd:   tokenTree.LineEnd,
+				LineStart: token.LineStart,
+				LineEnd:   token.LineEnd,
 				CharStart: value.Start,
 				CharEnd:   value.End,
-				//Child:     []TokenTree,
+				//Child:     []Token,
 			},
 		)
 
@@ -130,7 +133,7 @@ func submatchNode(tokenTree *TokenTree, lexer *NodeLexer) { //[]TokenTree
 	//return *result
 }
 
-func createTerminalNode(tokenTree *TokenTree, lexer *NodeLexer) {
+func createTerminalNode(token *Token, lexer *NodeLexer) {
 
 }
 
