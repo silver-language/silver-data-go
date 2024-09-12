@@ -5,6 +5,7 @@ import (
 	"log"
 	"regexp"
 	"silver-language/silver-data/util"
+	"strings"
 )
 
 var lexer = SilverLexer
@@ -12,6 +13,10 @@ var lexer = SilverLexer
 /* LexDocument
  */
 func LexDocument(document string) Token {
+
+	// pre-clean newlines
+	document = strings.ReplaceAll(document, "\r\n", "\n")
+	document = strings.ReplaceAll(document, "\r", "\n")
 
 	token := Token{
 		Type:      "document",
@@ -77,6 +82,7 @@ func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
 /* linesplitNode
  */
 func linesplitNode(token *Token, lexer *NodeLexer) {
+
 	re := regexp.MustCompile(lexer.Regex)
 	split := re.Split(token.Text, -1)
 
@@ -112,7 +118,7 @@ func submatchNode(token *Token, lexer *NodeLexer) { //[]Token
 
 	submatch := util.FindSubmatches(token.Text, *re)
 
-	log.Println(submatch)
+	log.Printf("%#v", submatch)
 	// there needs to be some distinction here
 
 	for i, value := range submatch[1:] {
