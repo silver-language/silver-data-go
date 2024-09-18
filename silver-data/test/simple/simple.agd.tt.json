@@ -1,8 +1,7 @@
 {
 	"Type": "document",
 	"Text": "a:\t1\nb:\n\t2\nc:\n\t1\n\t2\nd:\n\td1: 1\n\td2: 2\n",
-	"LineStart": 0,
-	"LineEnd": 10,
+	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
 	"Split": true,
@@ -10,8 +9,7 @@
 		{
 			"Type": "line",
 			"Text": "a:\t1",
-			"LineStart": 1,
-			"LineEnd": 1,
+			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 4,
 			"Split": true,
@@ -19,8 +17,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -29,8 +26,7 @@
 				{
 					"Type": "statement",
 					"Text": "a:\t1",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 4,
 					"Split": false,
@@ -41,8 +37,7 @@
 		{
 			"Type": "line",
 			"Text": "b:",
-			"LineStart": 2,
-			"LineEnd": 2,
+			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -50,8 +45,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -60,8 +54,7 @@
 				{
 					"Type": "statement",
 					"Text": "b:",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 2,
 					"Split": false,
@@ -72,8 +65,7 @@
 		{
 			"Type": "line",
 			"Text": "\t2",
-			"LineStart": 3,
-			"LineEnd": 3,
+			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -81,8 +73,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -91,8 +82,7 @@
 				{
 					"Type": "statement",
 					"Text": "2",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 1,
 					"CharEnd": 2,
 					"Split": false,
@@ -103,8 +93,7 @@
 		{
 			"Type": "line",
 			"Text": "c:",
-			"LineStart": 4,
-			"LineEnd": 4,
+			"Line": 4,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -112,8 +101,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 4,
-					"LineEnd": 4,
+					"Line": 4,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -122,8 +110,7 @@
 				{
 					"Type": "statement",
 					"Text": "c:",
-					"LineStart": 4,
-					"LineEnd": 4,
+					"Line": 4,
 					"CharStart": 0,
 					"CharEnd": 2,
 					"Split": false,
@@ -134,8 +121,7 @@
 		{
 			"Type": "line",
 			"Text": "\t1",
-			"LineStart": 5,
-			"LineEnd": 5,
+			"Line": 5,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -143,8 +129,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 5,
-					"LineEnd": 5,
+					"Line": 5,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -153,8 +138,7 @@
 				{
 					"Type": "statement",
 					"Text": "1",
-					"LineStart": 5,
-					"LineEnd": 5,
+					"Line": 5,
 					"CharStart": 1,
 					"CharEnd": 2,
 					"Split": false,
@@ -165,8 +149,7 @@
 		{
 			"Type": "line",
 			"Text": "\t2",
-			"LineStart": 6,
-			"LineEnd": 6,
+			"Line": 6,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -174,8 +157,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 6,
-					"LineEnd": 6,
+					"Line": 6,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -184,8 +166,7 @@
 				{
 					"Type": "statement",
 					"Text": "2",
-					"LineStart": 6,
-					"LineEnd": 6,
+					"Line": 6,
 					"CharStart": 1,
 					"CharEnd": 2,
 					"Split": false,
@@ -196,8 +177,7 @@
 		{
 			"Type": "line",
 			"Text": "d:",
-			"LineStart": 7,
-			"LineEnd": 7,
+			"Line": 7,
 			"CharStart": 0,
 			"CharEnd": 2,
 			"Split": true,
@@ -205,8 +185,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 7,
-					"LineEnd": 7,
+					"Line": 7,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -215,8 +194,7 @@
 				{
 					"Type": "statement",
 					"Text": "d:",
-					"LineStart": 7,
-					"LineEnd": 7,
+					"Line": 7,
 					"CharStart": 0,
 					"CharEnd": 2,
 					"Split": false,
@@ -227,8 +205,7 @@
 		{
 			"Type": "line",
 			"Text": "\td1: 1",
-			"LineStart": 8,
-			"LineEnd": 8,
+			"Line": 8,
 			"CharStart": 0,
 			"CharEnd": 6,
 			"Split": true,
@@ -236,8 +213,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 8,
-					"LineEnd": 8,
+					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -246,8 +222,7 @@
 				{
 					"Type": "statement",
 					"Text": "d1: 1",
-					"LineStart": 8,
-					"LineEnd": 8,
+					"Line": 8,
 					"CharStart": 1,
 					"CharEnd": 6,
 					"Split": false,
@@ -258,8 +233,7 @@
 		{
 			"Type": "line",
 			"Text": "\td2: 2",
-			"LineStart": 9,
-			"LineEnd": 9,
+			"Line": 9,
 			"CharStart": 0,
 			"CharEnd": 6,
 			"Split": true,
@@ -267,8 +241,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 9,
-					"LineEnd": 9,
+					"Line": 9,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -277,8 +250,7 @@
 				{
 					"Type": "statement",
 					"Text": "d2: 2",
-					"LineStart": 9,
-					"LineEnd": 9,
+					"Line": 9,
 					"CharStart": 1,
 					"CharEnd": 6,
 					"Split": false,
@@ -289,8 +261,7 @@
 		{
 			"Type": "line-empty",
 			"Text": "",
-			"LineStart": 10,
-			"LineEnd": 10,
+			"Line": 10,
 			"CharStart": 0,
 			"CharEnd": 0,
 			"Split": false,

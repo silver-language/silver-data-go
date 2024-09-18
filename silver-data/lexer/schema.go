@@ -9,8 +9,7 @@ package lexer
 type Token struct {
 	Type      string // type of token
 	Text      string // raw text of the token
-	LineStart int    // start line of this token
-	LineEnd   int    // end line of this token
+	Line      int    // end line of this token
 	CharStart int    // start character of this token
 	CharEnd   int    // end character of this token
 	Split     bool   // whether to split this token into chiild tokens

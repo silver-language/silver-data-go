@@ -1,8 +1,7 @@
 {
 	"Type": "document",
 	"Text": "\nfactorial : Function\n\tparameter : Integer number\t\t// domain\n\ttype : Integer\t\t\t\t\t// codomain\n\tresult : match (number = 0)\t\t// image/range\n\t\ttrue\t: 1\n\t\tfalse\t: factorial(number: parameter.number-1)\nfactorial end\n",
-	"LineStart": 0,
-	"LineEnd": 9,
+	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
 	"Split": true,
@@ -10,8 +9,7 @@
 		{
 			"Type": "line-empty",
 			"Text": "",
-			"LineStart": 1,
-			"LineEnd": 1,
+			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
 			"Split": false,
@@ -20,8 +18,7 @@
 		{
 			"Type": "line",
 			"Text": "factorial : Function",
-			"LineStart": 2,
-			"LineEnd": 2,
+			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 20,
 			"Split": true,
@@ -29,8 +26,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -39,8 +35,7 @@
 				{
 					"Type": "statement",
 					"Text": "factorial : Function",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 20,
 					"Split": false,
@@ -51,8 +46,7 @@
 		{
 			"Type": "line",
 			"Text": "\tparameter : Integer number\t\t// domain",
-			"LineStart": 3,
-			"LineEnd": 3,
+			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 38,
 			"Split": true,
@@ -60,8 +54,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -70,8 +63,7 @@
 				{
 					"Type": "statement",
 					"Text": "parameter : Integer number\t\t// domain",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 1,
 					"CharEnd": 38,
 					"Split": false,
@@ -82,8 +74,7 @@
 		{
 			"Type": "line",
 			"Text": "\ttype : Integer\t\t\t\t\t// codomain",
-			"LineStart": 4,
-			"LineEnd": 4,
+			"Line": 4,
 			"CharStart": 0,
 			"CharEnd": 31,
 			"Split": true,
@@ -91,8 +82,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 4,
-					"LineEnd": 4,
+					"Line": 4,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -101,8 +91,7 @@
 				{
 					"Type": "statement",
 					"Text": "type : Integer\t\t\t\t\t// codomain",
-					"LineStart": 4,
-					"LineEnd": 4,
+					"Line": 4,
 					"CharStart": 1,
 					"CharEnd": 31,
 					"Split": false,
@@ -113,8 +102,7 @@
 		{
 			"Type": "line",
 			"Text": "\tresult : match (number = 0)\t\t// image/range",
-			"LineStart": 5,
-			"LineEnd": 5,
+			"Line": 5,
 			"CharStart": 0,
 			"CharEnd": 44,
 			"Split": true,
@@ -122,8 +110,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 5,
-					"LineEnd": 5,
+					"Line": 5,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -132,8 +119,7 @@
 				{
 					"Type": "statement",
 					"Text": "result : match (number = 0)\t\t// image/range",
-					"LineStart": 5,
-					"LineEnd": 5,
+					"Line": 5,
 					"CharStart": 1,
 					"CharEnd": 44,
 					"Split": false,
@@ -144,8 +130,7 @@
 		{
 			"Type": "line",
 			"Text": "\t\ttrue\t: 1",
-			"LineStart": 6,
-			"LineEnd": 6,
+			"Line": 6,
 			"CharStart": 0,
 			"CharEnd": 10,
 			"Split": true,
@@ -153,8 +138,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t\t",
-					"LineStart": 6,
-					"LineEnd": 6,
+					"Line": 6,
 					"CharStart": 0,
 					"CharEnd": 2,
 					"Split": false,
@@ -163,8 +147,7 @@
 				{
 					"Type": "statement",
 					"Text": "true\t: 1",
-					"LineStart": 6,
-					"LineEnd": 6,
+					"Line": 6,
 					"CharStart": 2,
 					"CharEnd": 10,
 					"Split": false,
@@ -175,8 +158,7 @@
 		{
 			"Type": "line",
 			"Text": "\t\tfalse\t: factorial(number: parameter.number-1)",
-			"LineStart": 7,
-			"LineEnd": 7,
+			"Line": 7,
 			"CharStart": 0,
 			"CharEnd": 47,
 			"Split": true,
@@ -184,8 +166,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t\t",
-					"LineStart": 7,
-					"LineEnd": 7,
+					"Line": 7,
 					"CharStart": 0,
 					"CharEnd": 2,
 					"Split": false,
@@ -194,8 +175,7 @@
 				{
 					"Type": "statement",
 					"Text": "false\t: factorial(number: parameter.number-1)",
-					"LineStart": 7,
-					"LineEnd": 7,
+					"Line": 7,
 					"CharStart": 2,
 					"CharEnd": 47,
 					"Split": false,
@@ -206,8 +186,7 @@
 		{
 			"Type": "line",
 			"Text": "factorial end",
-			"LineStart": 8,
-			"LineEnd": 8,
+			"Line": 8,
 			"CharStart": 0,
 			"CharEnd": 13,
 			"Split": true,
@@ -215,8 +194,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 8,
-					"LineEnd": 8,
+					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -225,8 +203,7 @@
 				{
 					"Type": "statement",
 					"Text": "factorial end",
-					"LineStart": 8,
-					"LineEnd": 8,
+					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 13,
 					"Split": false,
@@ -237,8 +214,7 @@
 		{
 			"Type": "line-empty",
 			"Text": "",
-			"LineStart": 9,
-			"LineEnd": 9,
+			"Line": 9,
 			"CharStart": 0,
 			"CharEnd": 0,
 			"Split": false,

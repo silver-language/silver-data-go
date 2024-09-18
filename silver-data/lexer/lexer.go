@@ -15,10 +15,9 @@ var lexer = SilverLexer
 func LexDocument(document string) Token {
 
 	token := Token{
-		Type:      "document",
-		Text:      document,
-		LineStart: 0,
-		LineEnd:   0,
+		Type: "document",
+		Text: document,
+		//Line:      0,
 		CharStart: 0,
 		CharEnd:   0,
 		Split:     true,
@@ -104,8 +103,7 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 			newToken = Token{
 				Type:      "line-empty",
 				Text:      line,
-				LineStart: i + 1,
-				LineEnd:   i + 1,
+				Line:      i + 1,
 				CharStart: 0,
 				CharEnd:   len(line),
 				Split:     false,
@@ -117,8 +115,7 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 			newToken = Token{
 				Type:      "line",
 				Text:      line,
-				LineStart: i + 1,
-				LineEnd:   i + 1,
+				Line:      i + 1,
 				CharStart: 0,
 				CharEnd:   len(line),
 				Split:     true,
@@ -129,7 +126,7 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 		documentToken.Child = append(documentToken.Child, newToken)
 	}
 	lastChild := documentToken.Child[len(documentToken.Child)-1]
-	documentToken.LineEnd = lastChild.LineEnd
+	//documentToken.Line = lastChild.Line
 	documentToken.CharEnd = lastChild.CharEnd
 }
 
@@ -150,8 +147,7 @@ func submatchNode(token *Token, lexer *NodeLexer) { //[]Token
 			Token{
 				Type:      lexer.Subexp[i].nodeType,
 				Text:      value.String,
-				LineStart: token.LineStart,
-				LineEnd:   token.LineEnd,
+				Line:      token.Line,
 				CharStart: value.Start,
 				CharEnd:   value.End,
 				//Child:     []Token,

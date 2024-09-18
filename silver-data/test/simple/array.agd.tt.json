@@ -1,8 +1,7 @@
 {
 	"Type": "document",
 	"Text": "myArray: Array\n\ta: 1\n\tb: 2\n",
-	"LineStart": 0,
-	"LineEnd": 4,
+	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
 	"Split": true,
@@ -10,8 +9,7 @@
 		{
 			"Type": "line",
 			"Text": "myArray: Array",
-			"LineStart": 1,
-			"LineEnd": 1,
+			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 14,
 			"Split": true,
@@ -19,8 +17,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -29,8 +26,7 @@
 				{
 					"Type": "statement",
 					"Text": "myArray: Array",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 14,
 					"Split": false,
@@ -41,8 +37,7 @@
 		{
 			"Type": "line",
 			"Text": "\ta: 1",
-			"LineStart": 2,
-			"LineEnd": 2,
+			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 5,
 			"Split": true,
@@ -50,8 +45,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -60,8 +54,7 @@
 				{
 					"Type": "statement",
 					"Text": "a: 1",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 1,
 					"CharEnd": 5,
 					"Split": false,
@@ -72,8 +65,7 @@
 		{
 			"Type": "line",
 			"Text": "\tb: 2",
-			"LineStart": 3,
-			"LineEnd": 3,
+			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 5,
 			"Split": true,
@@ -81,8 +73,7 @@
 				{
 					"Type": "indent",
 					"Text": "\t",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 1,
 					"Split": false,
@@ -91,8 +82,7 @@
 				{
 					"Type": "statement",
 					"Text": "b: 2",
-					"LineStart": 3,
-					"LineEnd": 3,
+					"Line": 3,
 					"CharStart": 1,
 					"CharEnd": 5,
 					"Split": false,
@@ -103,8 +93,7 @@
 		{
 			"Type": "line-empty",
 			"Text": "",
-			"LineStart": 4,
-			"LineEnd": 4,
+			"Line": 4,
 			"CharStart": 0,
 			"CharEnd": 0,
 			"Split": false,

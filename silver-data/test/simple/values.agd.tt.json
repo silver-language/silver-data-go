@@ -1,8 +1,7 @@
 {
 	"Type": "document",
 	"Text": "a: 1\nb: 2\n",
-	"LineStart": 0,
-	"LineEnd": 3,
+	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
 	"Split": true,
@@ -10,8 +9,7 @@
 		{
 			"Type": "line",
 			"Text": "a: 1",
-			"LineStart": 1,
-			"LineEnd": 1,
+			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 4,
 			"Split": true,
@@ -19,8 +17,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -29,8 +26,7 @@
 				{
 					"Type": "statement",
 					"Text": "a: 1",
-					"LineStart": 1,
-					"LineEnd": 1,
+					"Line": 1,
 					"CharStart": 0,
 					"CharEnd": 4,
 					"Split": false,
@@ -41,8 +37,7 @@
 		{
 			"Type": "line",
 			"Text": "b: 2",
-			"LineStart": 2,
-			"LineEnd": 2,
+			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 4,
 			"Split": true,
@@ -50,8 +45,7 @@
 				{
 					"Type": "indent",
 					"Text": "",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
 					"Split": false,
@@ -60,8 +54,7 @@
 				{
 					"Type": "statement",
 					"Text": "b: 2",
-					"LineStart": 2,
-					"LineEnd": 2,
+					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 4,
 					"Split": false,
@@ -72,8 +65,7 @@
 		{
 			"Type": "line-empty",
 			"Text": "",
-			"LineStart": 3,
-			"LineEnd": 3,
+			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 0,
 			"Split": false,
