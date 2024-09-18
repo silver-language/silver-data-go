@@ -8,35 +8,14 @@
 	"Split": true,
 	"Child": [
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 1,
 			"LineEnd": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		},
 		{
 			"Type": "line",
@@ -58,7 +37,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name:",
 					"LineStart": 2,
 					"LineEnd": 2,
@@ -89,7 +68,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name1:",
 					"LineStart": 3,
 					"LineEnd": 3,
@@ -120,7 +99,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value1",
 					"LineStart": 4,
 					"LineEnd": 4,
@@ -151,7 +130,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value2",
 					"LineStart": 5,
 					"LineEnd": 5,
@@ -182,7 +161,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value3",
 					"LineStart": 6,
 					"LineEnd": 6,
@@ -194,35 +173,14 @@
 			]
 		},
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 7,
 			"LineEnd": 7,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 7,
-					"LineEnd": 7,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 7,
-					"LineEnd": 7,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		},
 		{
 			"Type": "line",
@@ -244,7 +202,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name2:",
 					"LineStart": 8,
 					"LineEnd": 8,
@@ -275,7 +233,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value1",
 					"LineStart": 9,
 					"LineEnd": 9,
@@ -306,7 +264,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value2",
 					"LineStart": 10,
 					"LineEnd": 10,
@@ -337,7 +295,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value3",
 					"LineStart": 11,
 					"LineEnd": 11,
@@ -368,7 +326,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "end",
 					"LineStart": 12,
 					"LineEnd": 12,
@@ -380,35 +338,14 @@
 			]
 		},
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 13,
 			"LineEnd": 13,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 13,
-					"LineEnd": 13,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 13,
-					"LineEnd": 13,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		},
 		{
 			"Type": "line",
@@ -430,7 +367,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name3:",
 					"LineStart": 14,
 					"LineEnd": 14,
@@ -461,7 +398,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value1",
 					"LineStart": 15,
 					"LineEnd": 15,
@@ -492,7 +429,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value2",
 					"LineStart": 16,
 					"LineEnd": 16,
@@ -523,7 +460,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "value3",
 					"LineStart": 17,
 					"LineEnd": 17,
@@ -554,7 +491,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name3 end",
 					"LineStart": 18,
 					"LineEnd": 18,
@@ -585,7 +522,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "name end",
 					"LineStart": 19,
 					"LineEnd": 19,
@@ -597,35 +534,14 @@
 			]
 		},
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 20,
 			"LineEnd": 20,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 20,
-					"LineEnd": 20,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 20,
-					"LineEnd": 20,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		}
 	]
 }

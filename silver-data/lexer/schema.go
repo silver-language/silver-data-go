@@ -7,14 +7,15 @@ package lexer
  */
 
 type Token struct {
-	Type      string  // type of token
-	Text      string  // raw text of the token
-	LineStart int     // start line of this token
-	LineEnd   int     // end line of this token
-	CharStart int     // start character of this token
-	CharEnd   int     // end character of this token
-	Split     bool    // whether to split this token into chiild tokens
-	Child     []Token // zero or more child tree nodes
+	Type      string // type of token
+	Text      string // raw text of the token
+	LineStart int    // start line of this token
+	LineEnd   int    // end line of this token
+	CharStart int    // start character of this token
+	CharEnd   int    // end character of this token
+	Split     bool   // whether to split this token into chiild tokens
+	//Terminal  bool    // whether to split this token into child tokens
+	Child []Token // zero or more child tree nodes
 }
 
 /*

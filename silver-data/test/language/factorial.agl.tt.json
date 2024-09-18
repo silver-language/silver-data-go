@@ -8,35 +8,14 @@
 	"Split": true,
 	"Child": [
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 1,
 			"LineEnd": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 1,
-					"LineEnd": 1,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		},
 		{
 			"Type": "line",
@@ -58,7 +37,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "factorial : Function",
 					"LineStart": 2,
 					"LineEnd": 2,
@@ -89,7 +68,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "parameter : Integer number\t\t// domain",
 					"LineStart": 3,
 					"LineEnd": 3,
@@ -120,7 +99,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "type : Integer\t\t\t\t\t// codomain",
 					"LineStart": 4,
 					"LineEnd": 4,
@@ -151,7 +130,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "result : match (number = 0)\t\t// image/range",
 					"LineStart": 5,
 					"LineEnd": 5,
@@ -182,7 +161,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "true\t: 1",
 					"LineStart": 6,
 					"LineEnd": 6,
@@ -213,7 +192,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "false\t: factorial(number: parameter.number-1)",
 					"LineStart": 7,
 					"LineEnd": 7,
@@ -244,7 +223,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "factorial end",
 					"LineStart": 8,
 					"LineEnd": 8,
@@ -256,35 +235,14 @@
 			]
 		},
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 9,
 			"LineEnd": 9,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 9,
-					"LineEnd": 9,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 9,
-					"LineEnd": 9,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		}
 	]
 }

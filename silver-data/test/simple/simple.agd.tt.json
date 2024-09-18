@@ -27,7 +27,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "a:\t1",
 					"LineStart": 1,
 					"LineEnd": 1,
@@ -58,7 +58,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "b:",
 					"LineStart": 2,
 					"LineEnd": 2,
@@ -89,7 +89,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "2",
 					"LineStart": 3,
 					"LineEnd": 3,
@@ -120,7 +120,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "c:",
 					"LineStart": 4,
 					"LineEnd": 4,
@@ -151,7 +151,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "1",
 					"LineStart": 5,
 					"LineEnd": 5,
@@ -182,7 +182,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "2",
 					"LineStart": 6,
 					"LineEnd": 6,
@@ -213,7 +213,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "d:",
 					"LineStart": 7,
 					"LineEnd": 7,
@@ -244,7 +244,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "d1: 1",
 					"LineStart": 8,
 					"LineEnd": 8,
@@ -275,7 +275,7 @@
 					"Child": null
 				},
 				{
-					"Type": "statement: node type not found",
+					"Type": "statement",
 					"Text": "d2: 2",
 					"LineStart": 9,
 					"LineEnd": 9,
@@ -287,35 +287,14 @@
 			]
 		},
 		{
-			"Type": "line",
+			"Type": "line-empty",
 			"Text": "",
 			"LineStart": 10,
 			"LineEnd": 10,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": true,
-			"Child": [
-				{
-					"Type": "indent",
-					"Text": "",
-					"LineStart": 10,
-					"LineEnd": 10,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				},
-				{
-					"Type": "statement: node type not found",
-					"Text": "",
-					"LineStart": 10,
-					"LineEnd": 10,
-					"CharStart": 0,
-					"CharEnd": 0,
-					"Split": false,
-					"Child": null
-				}
-			]
+			"Split": false,
+			"Child": null
 		}
 	]
 }

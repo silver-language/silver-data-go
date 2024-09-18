@@ -14,10 +14,6 @@ var lexer = SilverLexer
  */
 func LexDocument(document string) Token {
 
-	// pre-clean newlines
-	document = strings.ReplaceAll(document, "\r\n", "\n")
-	document = strings.ReplaceAll(document, "\r", "\n")
-
 	token := Token{
 		Type:      "document",
 		Text:      document,
@@ -26,7 +22,8 @@ func LexDocument(document string) Token {
 		CharStart: 0,
 		CharEnd:   0,
 		Split:     true,
-		Child:     []Token{},
+		//Terminal:  false,
+		Child: []Token{},
 	}
 
 	documentLexer := lexer["document"]
@@ -47,7 +44,7 @@ func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
 	switch nodeLexer.Splitter {
 	case "documentSplitter":
 		{
-			linesplitNode(token, nodeLexer)
+			linesplitDocument(token, nodeLexer)
 		}
 	case "subExpression":
 		{
@@ -71,42 +68,69 @@ func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
 		else if there is no match eject or record error
 	*/
 
-	for index, item := range token.Child {
-		//log.Printf("Lex child: %v, %v \n", item.Type, &item)
-		itemLexer := lexer[item.Type]
-		LexTree(&token.Child[index], &itemLexer, item.Type)
+	for index, child := range token.Child {
+		log.Printf("Lex child: %#v \n", &child)
+		if child.Split {
+			itemLexer := lexer[child.Type]
+			LexTree(&token.Child[index], &itemLexer, child.Type)
+		}
+
 	}
 
 }
 
-/* linesplitNode
+/* linesplitDocument
  */
-func linesplitNode(token *Token, lexer *NodeLexer) {
+func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 
-	re := regexp.MustCompile(lexer.Regex)
-	split := re.Split(token.Text, -1)
+	// pre-clean newlines
+	documentToken.Text = strings.ReplaceAll(documentToken.Text, "\r\n", "\n")
+	documentToken.Text = strings.ReplaceAll(documentToken.Text, "\r", "\n")
 
-	result := []Token{}
+	//result := []Token{}
+	var newToken Token
 
-	for i := 1; i <= len(split); i++ {
-		result = append(result,
-			Token{
-				Type:      "line",
-				Text:      split[i-1],
-				LineStart: i,
-				LineEnd:   i,
+	//re := regexp.MustCompile(lexer.Regex)
+	//split := re.Split(token.Text, -1)
+
+	split := strings.Split(documentToken.Text, "\n")
+
+	for i, line := range split {
+
+		log.Println(len(strings.TrimSpace(line)))
+
+		if len(strings.TrimSpace(line)) == 0 {
+			log.Println("if line len == 0")
+			newToken = Token{
+				Type:      "line-empty",
+				Text:      line,
+				LineStart: i + 1,
+				LineEnd:   i + 1,
 				CharStart: 0,
-				CharEnd:   len(split[i-1]),
+				CharEnd:   len(line),
+				Split:     false,
+				//Terminal:  true,
+				//Child:     []Token{},
+			}
+		} else {
+			log.Println("else")
+			newToken = Token{
+				Type:      "line",
+				Text:      line,
+				LineStart: i + 1,
+				LineEnd:   i + 1,
+				CharStart: 0,
+				CharEnd:   len(line),
 				Split:     true,
-				Child:     []Token{},
-			},
-		)
+				//Terminal:  false,
+				Child: []Token{},
+			}
+		}
+		documentToken.Child = append(documentToken.Child, newToken)
 	}
-
-	token.Child = result
-	lastChild := token.Child[len(token.Child)-1]
-	token.LineEnd = lastChild.LineEnd
-	token.CharEnd = lastChild.CharEnd
+	lastChild := documentToken.Child[len(documentToken.Child)-1]
+	documentToken.LineEnd = lastChild.LineEnd
+	documentToken.CharEnd = lastChild.CharEnd
 }
 
 /* submatchNode
