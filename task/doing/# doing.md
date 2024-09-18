@@ -17,5 +17,7 @@ in progress as needed, medium priority
 Secondary tasks
 ---------------
 
+* Split tasks into smaller chunks
+* Figure out what structure(s) a client using silver-data should have
 * Work on schema for the Abstract Syntax Tree
 * Have a look at the built-in go testing system
