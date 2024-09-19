@@ -31,22 +31,21 @@ var SilverLexer = Lexer{
 		Terminal: true,
 		Splitter: "none",
 	},
-	/*
-		"statement": NodeLexer{
-			nodeType: "statement",
-			regex:    `([^:]*):(.*)`,
-			subexp: []Subexp{
-				{
-					number:   1,
-					nodeType: "name",
-				},
-				{
-					number:   2,
-					nodeType: "statement",
-				},
+	"statement": NodeLexer{
+		Terminal: false,
+		Splitter: "subExpression",
+		Regex:    `([^:]*:)+(.*)`,
+		Subexp: []Submatch{
+			{
+				index:    0,
+				nodeType: "name",
+			},
+			{
+				index:    1,
+				nodeType: "statement",
 			},
 		},
-	*/
+	},
 }
 
 type File struct {
