@@ -2,6 +2,7 @@ package lexer
 
 var SilverLexer = Lexer{
 	"document": NodeLexer{
+		Terminal: false,
 		Splitter: "documentSplitter",
 		Regex:    `\n`,
 		Subexp: []Submatch{
@@ -12,6 +13,7 @@ var SilverLexer = Lexer{
 		},
 	},
 	"line": NodeLexer{
+		Terminal: false,
 		Splitter: "subExpression",
 		Regex:    `^(\t*)(.*)$`,
 		Subexp: []Submatch{
@@ -26,6 +28,7 @@ var SilverLexer = Lexer{
 		},
 	},
 	"indent": NodeLexer{
+		Terminal: true,
 		Splitter: "none",
 	},
 	/*

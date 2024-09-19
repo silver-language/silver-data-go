@@ -7,14 +7,13 @@ package lexer
  */
 
 type Token struct {
-	Type      string // type of token
-	Text      string // raw text of the token
-	Line      int    // end line of this token
-	CharStart int    // start character of this token
-	CharEnd   int    // end character of this token
-	Split     bool   // whether to split this token into chiild tokens
-	//Terminal  bool    // whether to split this token into child tokens
-	Child []Token // zero or more child tree nodes
+	Type      string  // type of token
+	Text      string  // raw text of the token
+	Line      int     // end line of this token
+	CharStart int     // start character of this token
+	CharEnd   int     // end character of this token
+	Terminal  bool    // whether this is a terminal node
+	Child     []Token // zero or more child tree nodes
 }
 
 /*
@@ -31,6 +30,7 @@ type Token struct {
 type Lexer map[string]NodeLexer
 
 type NodeLexer struct {
+	Terminal bool
 	Splitter string
 	Regex    string
 	Test     []string

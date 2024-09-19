@@ -20,9 +20,8 @@ func LexDocument(document string) Token {
 		//Line:      0,
 		CharStart: 0,
 		CharEnd:   0,
-		Split:     true,
-		//Terminal:  false,
-		Child: []Token{},
+		Terminal:  false,
+		Child:     []Token{},
 	}
 
 	documentLexer := lexer["document"]
@@ -69,7 +68,7 @@ func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
 
 	for index, child := range token.Child {
 		log.Printf("Lex child: %#v \n", &child)
-		if child.Split {
+		if !child.Terminal {
 			itemLexer := lexer[child.Type]
 			LexTree(&token.Child[index], &itemLexer, child.Type)
 		}
@@ -82,7 +81,7 @@ func LexTree(token *Token, nodeLexer *NodeLexer, nodeType string) {
  */
 func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 
-	// pre-clean newlines
+	// Normalise newlines
 	documentToken.Text = strings.ReplaceAll(documentToken.Text, "\r\n", "\n")
 	documentToken.Text = strings.ReplaceAll(documentToken.Text, "\r", "\n")
 
@@ -106,8 +105,7 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 				Line:      i + 1,
 				CharStart: 0,
 				CharEnd:   len(line),
-				Split:     false,
-				//Terminal:  true,
+				Terminal:  true,
 				//Child:     []Token{},
 			}
 		} else {
@@ -118,9 +116,8 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 				Line:      i + 1,
 				CharStart: 0,
 				CharEnd:   len(line),
-				Split:     true,
-				//Terminal:  false,
-				Child: []Token{},
+				Terminal:  false,
+				Child:     []Token{},
 			}
 		}
 		documentToken.Child = append(documentToken.Child, newToken)
@@ -132,10 +129,10 @@ func linesplitDocument(documentToken *Token, lexer *NodeLexer) {
 
 /* submatchNode
  */
-func submatchNode(token *Token, lexer *NodeLexer) { //[]Token
+func submatchNode(token *Token, nodeLexer *NodeLexer) { //[]Token
 	//result := new([]Token)
 
-	re := regexp.MustCompile(lexer.Regex)
+	re := regexp.MustCompile(nodeLexer.Regex)
 
 	submatch := util.FindSubmatches(token.Text, *re)
 
@@ -145,17 +142,16 @@ func submatchNode(token *Token, lexer *NodeLexer) { //[]Token
 	for i, value := range submatch[1:] {
 		token.Child = append(token.Child,
 			Token{
-				Type:      lexer.Subexp[i].nodeType,
+				Type:      nodeLexer.Subexp[i].nodeType,
 				Text:      value.String,
 				Line:      token.Line,
 				CharStart: value.Start,
 				CharEnd:   value.End,
+				Terminal:  lexer[nodeLexer.Subexp[i].nodeType].Terminal,
 				//Child:     []Token,
 			},
 		)
-
 	}
-
 	//return *result
 }
 

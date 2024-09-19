@@ -4,7 +4,7 @@
 	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
-	"Split": true,
+	"Terminal": false,
 	"Child": [
 		{
 			"Type": "line-empty",
@@ -12,7 +12,7 @@
 			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -21,7 +21,7 @@
 			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 20,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -29,16 +29,16 @@
 					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "factorial : Function",
 					"Line": 2,
 					"CharStart": 0,
 					"CharEnd": 20,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -49,7 +49,7 @@
 			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 38,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -57,16 +57,16 @@
 					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "parameter : Integer number\t\t// domain",
 					"Line": 3,
 					"CharStart": 1,
 					"CharEnd": 38,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -77,7 +77,7 @@
 			"Line": 4,
 			"CharStart": 0,
 			"CharEnd": 31,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -85,16 +85,16 @@
 					"Line": 4,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "type : Integer\t\t\t\t\t// codomain",
 					"Line": 4,
 					"CharStart": 1,
 					"CharEnd": 31,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -105,7 +105,7 @@
 			"Line": 5,
 			"CharStart": 0,
 			"CharEnd": 44,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -113,16 +113,16 @@
 					"Line": 5,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "result : match (number = 0)\t\t// image/range",
 					"Line": 5,
 					"CharStart": 1,
 					"CharEnd": 44,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -133,7 +133,7 @@
 			"Line": 6,
 			"CharStart": 0,
 			"CharEnd": 10,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -141,16 +141,16 @@
 					"Line": 6,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "true\t: 1",
 					"Line": 6,
 					"CharStart": 2,
 					"CharEnd": 10,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -161,7 +161,7 @@
 			"Line": 7,
 			"CharStart": 0,
 			"CharEnd": 47,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -169,16 +169,16 @@
 					"Line": 7,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "false\t: factorial(number: parameter.number-1)",
 					"Line": 7,
 					"CharStart": 2,
 					"CharEnd": 47,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -189,7 +189,7 @@
 			"Line": 8,
 			"CharStart": 0,
 			"CharEnd": 13,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -197,16 +197,16 @@
 					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "factorial end",
 					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 13,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -217,7 +217,7 @@
 			"Line": 9,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		}
 	]

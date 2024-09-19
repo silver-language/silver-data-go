@@ -4,7 +4,7 @@
 	"Line": 0,
 	"CharStart": 0,
 	"CharEnd": 0,
-	"Split": true,
+	"Terminal": false,
 	"Child": [
 		{
 			"Type": "line-empty",
@@ -12,7 +12,7 @@
 			"Line": 1,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -21,7 +21,7 @@
 			"Line": 2,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -30,7 +30,7 @@
 			"Line": 3,
 			"CharStart": 0,
 			"CharEnd": 15,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -38,16 +38,16 @@
 					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "myDoc: Document",
 					"Line": 3,
 					"CharStart": 0,
 					"CharEnd": 15,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -58,7 +58,7 @@
 			"Line": 4,
 			"CharStart": 0,
 			"CharEnd": 44,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -66,16 +66,16 @@
 					"Line": 4,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "Title 'This is the heading of the document'",
 					"Line": 4,
 					"CharStart": 1,
 					"CharEnd": 44,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -86,7 +86,7 @@
 			"Line": 5,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -95,7 +95,7 @@
 			"Line": 6,
 			"CharStart": 0,
 			"CharEnd": 10,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -103,16 +103,16 @@
 					"Line": 6,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "Paragraph",
 					"Line": 6,
 					"CharStart": 1,
 					"CharEnd": 10,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -123,7 +123,7 @@
 			"Line": 7,
 			"CharStart": 0,
 			"CharEnd": 13,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -131,16 +131,16 @@
 					"Line": 7,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "lorum ipsum",
 					"Line": 7,
 					"CharStart": 2,
 					"CharEnd": 13,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -151,7 +151,7 @@
 			"Line": 8,
 			"CharStart": 0,
 			"CharEnd": 16,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -159,16 +159,16 @@
 					"Line": 8,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "dolor sit amet",
 					"Line": 8,
 					"CharStart": 2,
 					"CharEnd": 16,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -179,7 +179,7 @@
 			"Line": 9,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -188,7 +188,7 @@
 			"Line": 10,
 			"CharStart": 0,
 			"CharEnd": 27,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -196,16 +196,16 @@
 					"Line": 10,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "Link http://localhost/help",
 					"Line": 10,
 					"CharStart": 1,
 					"CharEnd": 27,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -216,7 +216,7 @@
 			"Line": 11,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -225,7 +225,7 @@
 			"Line": 12,
 			"CharStart": 0,
 			"CharEnd": 14,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -233,16 +233,16 @@
 					"Line": 12,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "UnorderedList",
 					"Line": 12,
 					"CharStart": 1,
 					"CharEnd": 14,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -253,7 +253,7 @@
 			"Line": 13,
 			"CharStart": 0,
 			"CharEnd": 8,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -261,16 +261,16 @@
 					"Line": 13,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "item 1",
 					"Line": 13,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -281,7 +281,7 @@
 			"Line": 14,
 			"CharStart": 0,
 			"CharEnd": 8,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -289,16 +289,16 @@
 					"Line": 14,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "item 2",
 					"Line": 14,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -309,7 +309,7 @@
 			"Line": 15,
 			"CharStart": 0,
 			"CharEnd": 8,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -317,16 +317,16 @@
 					"Line": 15,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "item 3",
 					"Line": 15,
 					"CharStart": 2,
 					"CharEnd": 8,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -337,7 +337,7 @@
 			"Line": 16,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -346,7 +346,7 @@
 			"Line": 17,
 			"CharStart": 0,
 			"CharEnd": 12,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -354,16 +354,16 @@
 					"Line": 17,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "OrderedList",
 					"Line": 17,
 					"CharStart": 1,
 					"CharEnd": 12,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -374,7 +374,7 @@
 			"Line": 18,
 			"CharStart": 0,
 			"CharEnd": 9,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -382,16 +382,16 @@
 					"Line": 18,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "do this",
 					"Line": 18,
 					"CharStart": 2,
 					"CharEnd": 9,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -402,7 +402,7 @@
 			"Line": 19,
 			"CharStart": 0,
 			"CharEnd": 11,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -410,16 +410,16 @@
 					"Line": 19,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "then this",
 					"Line": 19,
 					"CharStart": 2,
 					"CharEnd": 11,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -430,7 +430,7 @@
 			"Line": 20,
 			"CharStart": 0,
 			"CharEnd": 14,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -438,16 +438,16 @@
 					"Line": 20,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "finally this",
 					"Line": 20,
 					"CharStart": 2,
 					"CharEnd": 14,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -458,7 +458,7 @@
 			"Line": 21,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -467,7 +467,7 @@
 			"Line": 22,
 			"CharStart": 0,
 			"CharEnd": 5,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -475,16 +475,16 @@
 					"Line": 22,
 					"CharStart": 0,
 					"CharEnd": 1,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "Code",
 					"Line": 22,
 					"CharStart": 1,
 					"CharEnd": 5,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -495,7 +495,7 @@
 			"Line": 23,
 			"CharStart": 0,
 			"CharEnd": 24,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -503,16 +503,16 @@
 					"Line": 23,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "10 print \"Hello world\"",
 					"Line": 23,
 					"CharStart": 2,
 					"CharEnd": 24,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -523,7 +523,7 @@
 			"Line": 24,
 			"CharStart": 0,
 			"CharEnd": 12,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -531,16 +531,16 @@
 					"Line": 24,
 					"CharStart": 0,
 					"CharEnd": 2,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "20 goto 10",
 					"Line": 24,
 					"CharStart": 2,
 					"CharEnd": 12,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -551,7 +551,7 @@
 			"Line": 25,
 			"CharStart": 0,
 			"CharEnd": 9,
-			"Split": true,
+			"Terminal": false,
 			"Child": [
 				{
 					"Type": "indent",
@@ -559,16 +559,16 @@
 					"Line": 25,
 					"CharStart": 0,
 					"CharEnd": 0,
-					"Split": false,
+					"Terminal": true,
 					"Child": null
 				},
 				{
-					"Type": "statement",
+					"Type": "statement: node type not found",
 					"Text": "myDoc end",
 					"Line": 25,
 					"CharStart": 0,
 					"CharEnd": 9,
-					"Split": false,
+					"Terminal": false,
 					"Child": null
 				}
 			]
@@ -579,7 +579,7 @@
 			"Line": 26,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		},
 		{
@@ -588,7 +588,7 @@
 			"Line": 27,
 			"CharStart": 0,
 			"CharEnd": 0,
-			"Split": false,
+			"Terminal": true,
 			"Child": null
 		}
 	]
